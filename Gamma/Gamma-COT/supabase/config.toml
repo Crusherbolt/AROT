@@ -1,0 +1,16 @@
+project_id = "qvaemirywjrnesenfxrz"
+
+[functions.fetch-news]
+verify_jwt = false
+
+[functions.fetch-cot]
+verify_jwt = false
+
+[functions.fetch-calendar]
+verify_jwt = false
+
+[functions.fetch-gamma]
+verify_jwt = false
+
+[functions.fetch-etf-flow]
+verify_jwt = false

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --bullish: 152 69% 45%;
+    --bullish-foreground: 0 0% 100%;
+    --bearish: 0 72% 51%;
+    --bearish-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 0%;
+    
+    --surface: 0 0% 100%;
+    --surface-hover: 210 40% 98%;
+    --surface-active: 210 40% 96%;
+    
+    --glow-primary: 0 0 20px hsl(199 89% 48% / 0.3);
+    --glow-bullish: 0 0 20px hsl(152 69% 45% / 0.3);
+    --glow-bearish: 0 0 20px hsl(0 72% 51% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 199 89% 48%;
+
+    --bullish: 152 69% 50%;
+    --bullish-foreground: 0 0% 100%;
+    --bearish: 0 72% 55%;
+    --bearish-foreground: 0 0% 100%;
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 0%;
+    
+    --surface: 222 47% 10%;
+    --surface-hover: 222 47% 12%;
+    --surface-active: 222 47% 14%;
+    
+    --glow-primary: 0 0 30px hsl(199 89% 48% / 0.4);
+    --glow-bullish: 0 0 30px hsl(152 69% 50% / 0.4);
+    --glow-bearish: 0 0 30px hsl(0 72% 55% / 0.4);
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 12%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-bullish {
+    box-shadow: var(--glow-bullish);
+  }
+
+  .glow-bearish {
+    box-shadow: var(--glow-bearish);
+  }
+
+  .text-bullish {
+    color: hsl(var(--bullish));
+  }
+
+  .text-bearish {
+    color: hsl(var(--bearish));
+  }
+
+  .bg-bullish {
+    background-color: hsl(var(--bullish));
+  }
+
+  .bg-bearish {
+    background-color: hsl(var(--bearish));
+  }
+
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .data-grid {
+    display: grid;
+    gap: 1px;
+    background-color: hsl(var(--border));
+  }
+
+  .data-grid > * {
+    background-color: hsl(var(--card));
+  }
+}
