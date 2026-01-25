@@ -1,7 +1,6 @@
 # AROT - Advanced Research on Options & Traders 📊
 
-![Project Banner](<img width="1099" height="905" alt="image" src="https://github.com/user-attachments/assets/47c795f3-9cd5-4e08-9716-50fae6bf536d" />
-)
+<img width="1099" height="905" alt="Project Banner" src="https://github.com/user-attachments/assets/47c795f3-9cd5-4e08-9716-50fae6bf536d" />
 
 > **The Ultimate Real-Time Dashboard for Professional Traders**  
 > Aggregating Gamma Exposure (GEX), COT Positioning, AAII Sentiment, and "Squawk" News Feeds into one actionable interface.
@@ -36,16 +35,12 @@ Decode the "Commitments of Traders" reports efficiently.
 
 | Dashboard Overview | Gamma Analysis |
 |:---:|:---:|
-| ![Dashboard](<img width="825" height="912" alt="image" src="https://github.com/user-attachments/assets/6d9635de-86d3-4cf7-b569-aae7abb51456" />
-) | ![Gamma](<img width="821" height="855" alt="image" src="https://github.com/user-attachments/assets/7b6607fb-39f8-4042-a7ab-e86c872bd032" />
-) |
+| <img width="825" height="912" alt="Dashboard" src="https://github.com/user-attachments/assets/6d9635de-86d3-4cf7-b569-aae7abb51456" /> | <img width="821" height="855" alt="Gamma" src="https://github.com/user-attachments/assets/7b6607fb-39f8-4042-a7ab-e86c872bd032" /> |
 | *Live Market Overview & Feeds* | *Deep Option Analytics* |
 
 | Live News Feed | COT Reports |
 |:---:|:---:|
-| ![News](<img width="843" height="626" alt="image" src="https://github.com/user-attachments/assets/dfcafcb8-72dc-4683-9f74-b1dc8a7df62a" />
-) | ![COT](<img width="819" height="913" alt="image" src="https://github.com/user-attachments/assets/863b4f92-12da-436e-83cb-347b3b78a355" />
-) |
+| <img width="843" height="626" alt="News" src="https://github.com/user-attachments/assets/dfcafcb8-72dc-4683-9f74-b1dc8a7df62a" /> | <img width="819" height="913" alt="COT" src="https://github.com/user-attachments/assets/863b4f92-12da-436e-83cb-347b3b78a355" /> |
 | *FinancialJuice & FXStreet Aggregation* | *Institutional Tracking* |
 
 ---
