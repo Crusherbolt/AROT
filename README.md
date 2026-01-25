@@ -1,83 +1,97 @@
-# AROT.tech - Advanced Research on Options & Traders
+# AROT - Advanced Research on Options & Traders 📊
 
-> **Real-Time Gamma Trading & COT Insights for Smarter Market Decisions**
+![Project Banner](public/screenshots/banner.png)
 
-AROT.tech is a cutting-edge financial analytics platform designed for professional traders, analysts, and market enthusiasts.
+> **The Ultimate Real-Time Dashboard for Professional Traders**  
+> Aggregating Gamma Exposure (GEX), COT Positioning, AAII Sentiment, and "Squawk" News Feeds into one actionable interface.
 
-## 🚀 Features
+[![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=arot-tech)](https://arot.tech)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### 📈 Gamma Trading Insights
-Track real-time gamma exposure (GEX) and understand how options positioning impacts market volatility.
+## 🌟 Features Breakdown
 
-### 📊 COT Reports (Commitments of Traders)
-Access the latest COT data with clear charts, helping you decode institutional vs. retail positioning.
+### 1. ⚡ Real-Time "Squawk" News Aggregator
+A terminal-grade news feed that aggregates headlines instantly from top-tier sources.
+- **Sources**: **FinancialJuice**, **FXStreet**, **Reuters**, **Yahoo Finance**, **CNBC**.
+- **Latency**: Near real-time (Client-side Proxy).
+- **Features**: Priority sorting (Major sources first), Auto-refresh, "Breaking" tags.
 
-### 📰 Live News Feed
-Stay updated with curated financial news, macroeconomic updates, and option market developments.
+### 2. 📉 Gamma Exposure (GEX)
+Visualize Market Maker positioning to predict volatility and price pins.
+- **Charts**: Zero GEX levels, Net Gamma profiles.
+- **Data**: Powered by Supabase (Real Options Data).
 
-### ⚡ Real-Time Analytics
-Dynamic dashboards that give traders actionable intelligence instantly.
+### 3. 🏦 Institutional Positioning (COT)
+Decode the "Commitments of Traders" reports efficiently.
+- **Metrics**: Net Commercial vs. Non-Commercial positions.
+- **Visuals**: Trend lines, Open Interest analysis.
 
-## 🛠️ Technology Stack
+### 4. 🧠 Market Sentiment
+- **AAII Sentiment**: Bull-Bear spread visualization.
+- **FedWatch Tool**: Real-time probabilities for upcoming FOMC Rate Decisions.
 
-- **Frontend**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui + Radix UI
-- **Charts**: Recharts
-- **Backend**: Supabase
+---
 
-## 📦 Installation
+## 📸 Screenshots
 
-```bash
-# Clone the repository
-git clone <your-repo-url>
-cd arot-tech
+| Dashboard Overview | Gamma Analysis |
+|:---:|:---:|
+| ![Dashboard](public/screenshots/dashboard.png) | ![Gamma](public/screenshots/gamma.png) |
+| *Live Market Overview & Feeds* | *Deep Option Analytics* |
 
-# Install dependencies
-npm install
+| Live News Feed | COT Reports |
+|:---:|:---:|
+| ![News](public/screenshots/news.png) | ![COT](public/screenshots/cot.png) |
+| *FinancialJuice & FXStreet Aggregation* | *Institutional Tracking* |
 
-# Start development server
-npm run dev
-```
+---
 
-The app will be available at `http://localhost:8080`
+## 🏗️ Architecture & Tech Stack
 
-## 🏗️ Build
+This project uses a hybrid data approach for maximum speed and reliability.
 
-```bash
-# Production build
-npm run build
+- **Frontend**: React 18 (Vite) + TypeScript + TailwindCSS.
+- **Database**: Supabase (for heavy options data).
+- **Data Engine**:
+  - **Live**: Client-side RSS integration (rss2json) for News.
+  - **Weekly**: Node.js scripts (`npm run update-data`) fetch COT/AAII data.
+- **Deployment**: Vercel (Edge Network).
+- **Automation**: GitHub Actions trigger weekly data updates automatically.
 
-# Preview production build
-npm run preview
-```
+## 📦 Installation & Setup
 
-## 🚀 Deployment
+1.  **Clone the Repo**
+    ```bash
+    git clone https://github.com/Crusherbolt/AROT.git
+    cd AROT
+    ```
 
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Import the repository in [Vercel](https://vercel.com)
-3. Deploy with default settings
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-### Other Platforms
-The `dist` folder after `npm run build` can be deployed to any static hosting service.
+3.  **Environment Setup**
+    Create a `.env` file with your Supabase credentials:
+    ```env
+    VITE_SUPABASE_URL=your_url
+    VITE_SUPABASE_PUBLISHABLE_KEY=your_key
+    ```
 
-## 🔑 SEO Keywords
+4.  **Run Locally**
+    ```bash
+    npm run dev
+    ```
+    Access at `http://localhost:8080`.
 
-- Gamma Trading
-- Gamma Exposure (GEX)
-- SPX Gamma Levels
-- Commitments of Traders (COT Report)
-- Options Flow Analysis
-- Real-Time Market News
-- Hedging & Dealer Positioning
-- Options Analytics Platform
+## 🔄 Data Updates
+
+- **Automatic**: News updates live. The Vercel deployment updates weekly via GitHub Actions.
+- **Manual**: Run the fetch script locally:
+  ```bash
+  npm run update-data
+  ```
 
 ## 📄 License
 
-© 2024 AROT.tech. All rights reserved.
-
-
-
-npm run update-data
+© 2026 AROT.tech. All rights reserved.
