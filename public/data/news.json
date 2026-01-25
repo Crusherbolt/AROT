@@ -1,16 +1,46 @@
 [
   {
-    "id": "669fpljvy",
+    "id": "ud68t21jg",
     "title": "Dow Jones Futures: Trump Threatens 100% Canada Tariff; Tesla, Microsoft, Meta, Apple Lead Earnings Wave",
     "url": "https://finance.yahoo.com/m/9c67d261-2ec7-3404-8375-4ecea0e235f3/dow-jones-futures%3A-trump.html?.tsrc=rss",
-    "timestamp": "2026-01-24T23:34:09.000Z",
+    "timestamp": "2026-01-25T00:20:16.000Z",
     "source": "Yahoo Finance",
     "sentiment": "neutral",
     "impact": "medium",
     "category": "economy"
   },
   {
-    "id": "64yzmg4pi",
+    "id": "7wshf5df8",
+    "title": "The Bull Case For Valero Energy (VLO) Could Change Following Dividend Hike And Venezuelan Crude Shift",
+    "url": "https://finance.yahoo.com/news/bull-case-valero-energy-vlo-001925613.html?.tsrc=rss",
+    "timestamp": "2026-01-25T00:19:25.000Z",
+    "source": "Yahoo Finance",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "economy"
+  },
+  {
+    "id": "47tppszml",
+    "title": "Namib Minerals (NAMM) Is Up 237.0% After Speculation-Fueled Gold Rally Spike Has The Bull Case Changed?",
+    "url": "https://finance.yahoo.com/news/namib-minerals-namm-237-0-001811915.html?.tsrc=rss",
+    "timestamp": "2026-01-25T00:18:11.000Z",
+    "source": "Yahoo Finance",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "commodities"
+  },
+  {
+    "id": "tkqdlv93m",
+    "title": "FinancialJuice: US to invest 1.6 billion dollars into rare earths group in effort to shore up key minerals-FT",
+    "url": "https://www.financialjuice.com/News/9404140/US-to-invest-16-billion-dollars-into-rare-earths-group-in-effort-to-shore-up-key-minerals-FT.aspx?xy=rss",
+    "timestamp": "2026-01-24T23:31:39.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "0vkark4ih",
     "title": "These Global ETFs Offer International Exposure but One Spans Further",
     "url": "https://www.fool.com/coverage/etfs/2026/01/24/these-global-etfs-offer-international-exposure-but-one-spans-further/?.tsrc=rss",
     "timestamp": "2026-01-24T23:30:41.000Z",
@@ -20,7 +50,7 @@
     "category": "economy"
   },
   {
-    "id": "nbx2gn2di",
+    "id": "9cnys7iwm",
     "title": "Better Vanguard ETF Buy: MGK vs. VOOG",
     "url": "https://www.fool.com/coverage/etfs/2026/01/24/better-vanguard-etf-buy-mgk-vs-voog/?.tsrc=rss",
     "timestamp": "2026-01-24T23:11:09.000Z",
@@ -30,7 +60,17 @@
     "category": "economy"
   },
   {
-    "id": "29ixhq2bq",
+    "id": "gr25y22zx",
+    "title": "FinancialJuice: Japan Prime Minister Takaichi: government will take necessary steps against speculative and abnormal market moves",
+    "url": "https://www.financialjuice.com/News/9404132/Japan-Prime-Minister-Takaichi-government-will-take-necessary-steps-against-speculative-and-abnormal-market-moves.aspx?xy=rss",
+    "timestamp": "2026-01-24T22:58:21.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "qnwvbrjkl",
     "title": "Which One of These Precious Metal ETFs Shine the Most?",
     "url": "https://www.fool.com/coverage/etfs/2026/01/24/which-one-of-these-precious-metal-etfs-shine-the-most/?.tsrc=rss",
     "timestamp": "2026-01-24T22:56:56.000Z",
@@ -40,7 +80,7 @@
     "category": "economy"
   },
   {
-    "id": "sp1jx99au",
+    "id": "ycdwo3xh2",
     "title": "Assessing Welltower (WELL) Valuation As Shares Trade Near Recent Highs",
     "url": "https://finance.yahoo.com/news/assessing-welltower-well-valuation-shares-220808828.html?.tsrc=rss",
     "timestamp": "2026-01-24T22:08:08.000Z",
@@ -50,7 +90,17 @@
     "category": "economy"
   },
   {
-    "id": "czpprs3ks",
+    "id": "n3zv5itd9",
+    "title": "FinancialJuice: Reagan airport on winter storm: expect widespread flight cancellations Sunday January 25",
+    "url": "https://www.financialjuice.com/News/9404116/Reagan-airport-on-winter-storm-expect-widespread-flight-cancellations-Sunday-January-25.aspx?xy=rss",
+    "timestamp": "2026-01-24T21:40:50.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "1m1h3bnx7",
     "title": "ACWX vs. VT: Comparing Two of the Top Global ETFs",
     "url": "https://www.fool.com/coverage/etfs/2026/01/24/acwx-vs-vt-comparing-two-of-the-top-global-etfs/?.tsrc=rss",
     "timestamp": "2026-01-24T21:33:21.000Z",
@@ -60,7 +110,7 @@
     "category": "economy"
   },
   {
-    "id": "7a8rnn2t0",
+    "id": "7mlnjt1o2",
     "title": "Where Will Coca-Cola Stock Be in 3 Years?",
     "url": "https://www.fool.com/investing/2026/01/24/where-will-coca-cola-stock-be-in-3-years/?.tsrc=rss",
     "timestamp": "2026-01-24T20:54:00.000Z",
@@ -70,7 +120,7 @@
     "category": "stocks"
   },
   {
-    "id": "nor1nadnt",
+    "id": "wgmtzwp8u",
     "title": "VWO vs. SPDW: How Does a Emerging Markets ETF Fair Against a Developed World Fund?",
     "url": "https://www.fool.com/coverage/etfs/2026/01/24/vwo-vs-spdw-how-does-a-emerging-markets-etf-fair-against-a-developed-world-fund/?.tsrc=rss",
     "timestamp": "2026-01-24T20:49:05.000Z",
@@ -80,7 +130,7 @@
     "category": "economy"
   },
   {
-    "id": "nyt7fncse",
+    "id": "pfky0d7es",
     "title": "Hedge Funds Increase Gold Bets to 16-Week High",
     "url": "https://finance.yahoo.com/news/hedge-funds-increase-gold-bets-201722048.html?.tsrc=rss",
     "timestamp": "2026-01-24T20:17:22.000Z",
@@ -90,7 +140,7 @@
     "category": "commodities"
   },
   {
-    "id": "0gr2aco95",
+    "id": "evtva8dnm",
     "title": "A Look At Fortuna Mining (TSX:FVI) Valuation After Séguéla Reserve Uplift And Mine Life Extension",
     "url": "https://finance.yahoo.com/news/look-fortuna-mining-tsx-fvi-201207622.html?.tsrc=rss",
     "timestamp": "2026-01-24T20:12:07.000Z",
@@ -100,7 +150,7 @@
     "category": "economy"
   },
   {
-    "id": "m3spvpke8",
+    "id": "gcp7nhbw7",
     "title": "Sandisk Stock Shows Why Investing Is Hard",
     "url": "https://www.fool.com/investing/2026/01/24/sandisk-stock-shows-why-investing-is-hard/?.tsrc=rss",
     "timestamp": "2026-01-24T20:07:00.000Z",
@@ -110,7 +160,7 @@
     "category": "stocks"
   },
   {
-    "id": "h13lyt2dl",
+    "id": "u6618nymx",
     "title": "The Ultimate Dividend Growth Stock to Buy With $1,000 Right Now",
     "url": "https://www.fool.com/investing/2026/01/24/the-ultimate-dividend-growth-stock-to-buy-with-100/?.tsrc=rss",
     "timestamp": "2026-01-24T19:50:00.000Z",
@@ -120,7 +170,7 @@
     "category": "stocks"
   },
   {
-    "id": "i13hojhb4",
+    "id": "yzr6aflei",
     "title": "2 Under-the-Radar Biotech Stocks Set to Boom in 2026",
     "url": "https://www.fool.com/investing/2026/01/24/2-under-the-radar-biotech-stocks-set-to-boom-in-20/?.tsrc=rss",
     "timestamp": "2026-01-24T19:20:00.000Z",
@@ -130,7 +180,7 @@
     "category": "stocks"
   },
   {
-    "id": "d7d3s59l3",
+    "id": "7yxlmx0im",
     "title": "Could a Wearable AI Pin Be the Next Big Thing for Apple Stock?",
     "url": "https://www.barchart.com/story/news/37214375/could-a-wearable-ai-pin-be-the-next-big-thing-for-apple-stock?.tsrc=rss",
     "timestamp": "2026-01-24T19:12:10.000Z",
@@ -140,7 +190,7 @@
     "category": "stocks"
   },
   {
-    "id": "xw3jhjq7y",
+    "id": "qboiy5utk",
     "title": "Trump Threatens 100% Tariffs on Canada If It Does China Deal",
     "url": "https://finance.yahoo.com/news/trump-threatens-100-retaliatory-tariffs-142110827.html?.tsrc=rss",
     "timestamp": "2026-01-24T19:08:55.000Z",
@@ -150,7 +200,17 @@
     "category": "economy"
   },
   {
-    "id": "4643kb641",
+    "id": "obn1uj3gv",
+    "title": "FinancialJuice: miso: resolved the system difficulties that were affecting real-time lmps and prices going forward will be available as normal",
+    "url": "https://www.financialjuice.com/News/9404071/miso-resolved-the-system-difficulties-that-were-affecting-real-time-lmps-and-prices-going-forward-will-be-available-as-normal.aspx?xy=rss",
+    "timestamp": "2026-01-24T18:57:11.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "hq2vapcie",
     "title": "3 Things Investors Need to Know About Western Union in 2026",
     "url": "https://www.fool.com/investing/2026/01/24/3-things-investors-need-to-know-about-western-unio/?.tsrc=rss",
     "timestamp": "2026-01-24T18:20:00.000Z",
@@ -160,7 +220,7 @@
     "category": "economy"
   },
   {
-    "id": "8gtwcbp3w",
+    "id": "2r25yswrz",
     "title": "Gold ETFs: GLDM Offers Lower Costs, While IAU Boasts More Assets Under Management",
     "url": "https://www.fool.com/coverage/etfs/2026/01/24/gold-etfs-gldm-offers-lower-costs-while-iau-boasts-more-assets-under-management/?.tsrc=rss",
     "timestamp": "2026-01-24T18:17:02.000Z",
@@ -170,7 +230,7 @@
     "category": "commodities"
   },
   {
-    "id": "xysud641y",
+    "id": "j84d2lmtz",
     "title": "Can Nano Nuclear Energy Stock Beat the Market in 2026?",
     "url": "https://www.fool.com/investing/2026/01/24/can-nano-nuclear-energy-stock-beat-the-market-in/?.tsrc=rss",
     "timestamp": "2026-01-24T18:05:00.000Z",
@@ -180,27 +240,547 @@
     "category": "stocks"
   },
   {
-    "id": "pmimke1ul",
-    "title": "Looking For More Bond Exposure? These ETFs May Be Solid Options",
-    "url": "https://www.fool.com/coverage/etfs/2026/01/24/looking-for-more-bond-exposure-these-etfs-may-be-solid-options/?.tsrc=rss",
-    "timestamp": "2026-01-24T17:45:01.000Z",
-    "source": "Yahoo Finance",
+    "id": "gswvx36qg",
+    "title": "FinancialJuice: UK Government: UK Prime Minister spoke to the President of the United States Donald Trump this afternoon",
+    "url": "https://www.financialjuice.com/News/9404057/UK-Government-UK-Prime-Minister-spoke-to-the-President-of-the-United-States-Donald-Trump-this-afternoon.aspx?xy=rss",
+    "timestamp": "2026-01-24T18:03:57.000Z",
+    "source": "FinancialJuice",
     "sentiment": "neutral",
     "impact": "medium",
-    "category": "economy"
+    "category": "forex"
   },
   {
-    "id": "xjhhy5qvf",
-    "title": "Want To Take Your Portfolio Around the World? These ETFs May Help",
-    "url": "https://www.fool.com/coverage/etfs/2026/01/24/want-to-take-your-portfolio-around-the-world-these-etfs-may-help/?.tsrc=rss",
-    "timestamp": "2026-01-24T16:30:29.000Z",
-    "source": "Yahoo Finance",
+    "id": "tofkrjinc",
+    "title": "FinancialJuice: North American power grid operator Midcontinent Independent System Operator Grid remains stable and Midcontinent Independent System Operator has ended its energy emergency alert 2",
+    "url": "https://www.financialjuice.com/News/9404040/North-American-power-grid-operator-Midcontinent-Independent-System-Operator-Grid-remains-stable-and-Midcontinent-Independent-System-Operator-has-ended-its-energy-emergency-alert-2.aspx?xy=rss",
+    "timestamp": "2026-01-24T17:58:53.000Z",
+    "source": "FinancialJuice",
     "sentiment": "neutral",
     "impact": "medium",
-    "category": "economy"
+    "category": "forex"
   },
   {
-    "id": "4o3myn8us",
+    "id": "7568fnvzg",
+    "title": "FinancialJuice: Iraq Shiite alliance names former Prime Minister Nouri al-Maliki as its nominee for post - state news agency",
+    "url": "https://www.financialjuice.com/News/9404039/Iraq-Shiite-alliance-names-former-Prime-Minister-Nouri-al-Maliki-as-its-nominee-for-post---state-news-agency.aspx?xy=rss",
+    "timestamp": "2026-01-24T17:55:05.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "ai5ehiofc",
+    "title": "FinancialJuice: Don't think we are so far away from a Putin Zelenskiy meeting considering recent progress in talks but other discussions have to take place, U.S. official :",
+    "url": "https://www.financialjuice.com/News/9404022/Dont-think-we-are-so-far-away-from-a-Putin-Zelenskiy-meeting-considering-recent-progress-in-talks-but-other-discussions-have-to-take-place-US-official-.aspx?xy=rss",
+    "timestamp": "2026-01-24T17:03:47.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "5moex8mcr",
+    "title": "FinancialJuice: 50,759 number of power outages reported in Texas as of 11:57 am ET - PowerOutage.US website",
+    "url": "https://www.financialjuice.com/News/9404020/50759-number-of-power-outages-reported-in-Texas-as-of-1157-am-ET---PowerOutageUS-website.aspx?xy=rss",
+    "timestamp": "2026-01-24T16:57:37.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "341egm81w",
+    "title": "FinancialJuice: Security protocols envisioned for post-war Ukraine are very strong: U.S. official",
+    "url": "https://www.financialjuice.com/News/9404019/Security-protocols-envisioned-for-post-war-Ukraine-are-very-strong-US-official.aspx?xy=rss",
+    "timestamp": "2026-01-24T16:55:03.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "vnm6s800p",
+    "title": "FinancialJuice: Trump : United States will gain sovereignty over American bases in Greenland -NY Post",
+    "url": "https://www.financialjuice.com/News/9404007/Trump--United-States-will-gain-sovereignty-over-American-bases-in-Greenland--NY-Post.aspx?xy=rss",
+    "timestamp": "2026-01-24T16:41:42.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "zt4eyd9p7",
+    "title": "FinancialJuice: Next round of Russia Ukraine talks will begin next Sunday in Abu Dhabi: U.S. official",
+    "url": "https://www.financialjuice.com/News/9404006/Next-round-of-Russia-Ukraine-talks-will-begin-next-Sunday-in-Abu-Dhabi-US-official.aspx?xy=rss",
+    "timestamp": "2026-01-24T16:40:30.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "9xhsmnhj0",
+    "title": "FinancialJuice: Trump: Last thing world needs is have China take over Canada. It is not going to happen or even come close to happening",
+    "url": "https://www.financialjuice.com/News/9404005/Trump-Last-thing-world-needs-is-have-China-take-over-Canada-It-is-not-going-to-happen-or-even-come-close-to-happening.aspx?xy=rss",
+    "timestamp": "2026-01-24T16:37:16.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "o8v2pdf5j",
+    "title": "FinancialJuice: Trump envoys Witkoff and Kushner met Russia President Putin for four hours in Moscow - senior US official",
+    "url": "https://www.financialjuice.com/News/9404004/Trump-envoys-Witkoff-and-Kushner-met-Russia-President-Putin-for-four-hours-in-Moscow---senior-US-official.aspx?xy=rss",
+    "timestamp": "2026-01-24T16:36:28.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "qun7myjsj",
+    "title": "FinancialJuice: ERCOT: grid conditions are expected to be normal and will continue monitoring weather conditions closely",
+    "url": "https://www.financialjuice.com/News/9403997/ERCOT-grid-conditions-are-expected-to-be-normal-and-will-continue-monitoring-weather-conditions-closely.aspx?xy=rss",
+    "timestamp": "2026-01-24T15:35:10.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "efmuutaig",
+    "title": "FinancialJuice: ERCOT: ERCOT weather watch goes into effect today until January 27 due to winter storm conditions across the ERCOT region",
+    "url": "https://www.financialjuice.com/News/9403996/ERCOT-ERCOT-weather-watch-goes-into-effect-today-until-January-27-due-to-winter-storm-conditions-across-the-ERCOT-region.aspx?xy=rss",
+    "timestamp": "2026-01-24T15:34:46.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "7wdxgzhud",
+    "title": "FinancialJuice: MISO: Currently experiencing system difficulties in sending out real-time LMPs; no prices are going out currently",
+    "url": "https://www.financialjuice.com/News/9403986/MISO-Currently-experiencing-system-difficulties-in-sending-out-real-time-LMPs-no-prices-are-going-out-currently.aspx?xy=rss",
+    "timestamp": "2026-01-24T15:20:31.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "zn0b4z169",
+    "title": "FinancialJuice: zelenskiy : american side raised issue of formats to formalize parameters for ending war",
+    "url": "https://www.financialjuice.com/News/9403954/zelenskiy--american-side-raised-issue-of-formats-to-formalize-parameters-for-ending-war.aspx?xy=rss",
+    "timestamp": "2026-01-24T14:09:11.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "doa5plx3l",
+    "title": "FinancialJuice: Zelenskiy : additional meetings could occur next week, Ukraine is prepared",
+    "url": "https://www.financialjuice.com/News/9403953/Zelenskiy--additional-meetings-could-occur-next-week-Ukraine-is-prepared.aspx?xy=rss",
+    "timestamp": "2026-01-24T14:07:11.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "o9r5mo0al",
+    "title": "FinancialJuice: zelenskiy: trilateral talks were constructive",
+    "url": "https://www.financialjuice.com/News/9403952/zelenskiy-trilateral-talks-were-constructive.aspx?xy=rss",
+    "timestamp": "2026-01-24T14:06:57.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "k6afw2qyl",
+    "title": "FinancialJuice: Zelenskiy, commenting on Abu Dhabi talks: military representatives identified a list of issues for potential next meeting",
+    "url": "https://www.financialjuice.com/News/9403951/Zelenskiy-commenting-on-Abu-Dhabi-talks-military-representatives-identified-a-list-of-issues-for-potential-next-meeting.aspx?xy=rss",
+    "timestamp": "2026-01-24T14:05:33.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "qejykke4o",
+    "title": "FinancialJuice: Trump: if Canada makes a deal with China, it will immediately be hit with a 100% tariff on all Canadian goods and products coming into the United States",
+    "url": "https://www.financialjuice.com/News/9403941/Trump-if-Canada-makes-a-deal-with-China-it-will-immediately-be-hit-with-a-100-tariff-on-all-Canadian-goods-and-products-coming-into-the-United-States.aspx?xy=rss",
+    "timestamp": "2026-01-24T13:59:01.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "z7va1hpti",
+    "title": "FinancialJuice: Trump: If Carney thinks he is going to make Canada a drop off port for China to send goods and products into United States, he is sorely",
+    "url": "https://www.financialjuice.com/News/9403940/Trump-If-Carney-thinks-he-is-going-to-make-Canada-a-drop-off-port-for-China-to-send-goods-and-products-into-United-States-he-is-sorely.aspx?xy=rss",
+    "timestamp": "2026-01-24T13:58:25.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "gqsvkq35q",
+    "title": "FinancialJuice: Russian Foreign Ministry on prospects of more talks with Ukraine in Istanbul: we remain open to continued dialogue - RIA",
+    "url": "https://www.financialjuice.com/News/9403925/Russian-Foreign-Ministry-on-prospects-of-more-talks-with-Ukraine-in-Istanbul-we-remain-open-to-continued-dialogue---RIA.aspx?xy=rss",
+    "timestamp": "2026-01-24T13:30:11.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "jyhjfly7y",
+    "title": "FinancialJuice: UAE government spokesperson : talks focused on outstanding elements of the US proposed peace framework",
+    "url": "https://www.financialjuice.com/News/9403924/UAE-government-spokesperson--talks-focused-on-outstanding-elements-of-the-US-proposed-peace-framework.aspx?xy=rss",
+    "timestamp": "2026-01-24T13:26:41.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "m5pzqewp5",
+    "title": "FinancialJuice: UAE government spokesperson: the talks were conducted in constructive and positive atmosphere",
+    "url": "https://www.financialjuice.com/News/9403923/UAE-government-spokesperson-the-talks-were-conducted-in-constructive-and-positive-atmosphere.aspx?xy=rss",
+    "timestamp": "2026-01-24T13:25:30.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "rwbelszhe",
+    "title": "FinancialJuice: UAE government spokesperson: talks hosted by Abu Dhabi between Russia and Ukraine included direct engagement between officials from both countries",
+    "url": "https://www.financialjuice.com/News/9403922/UAE-government-spokesperson-talks-hosted-by-Abu-Dhabi-between-Russia-and-Ukraine-included-direct-engagement-between-officials-from-both-countries.aspx?xy=rss",
+    "timestamp": "2026-01-24T13:24:37.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "61ayxft3j",
+    "title": "FinancialJuice: Ukraine Russia talks in Abu Dhabi have ended source :",
+    "url": "https://www.financialjuice.com/News/9403907/Ukraine-Russia-talks-in-Abu-Dhabi-have-ended-source-.aspx?xy=rss",
+    "timestamp": "2026-01-24T12:44:58.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "rgulo16x4",
+    "title": "FinancialJuice: Kentucky Governor Andy Beshear on Winter Storm: We Are Under a State of Emergency",
+    "url": "https://www.financialjuice.com/News/9403892/Kentucky-Governor-Andy-Beshear-on-Winter-Storm-We-Are-Under-a-State-of-Emergency.aspx?xy=rss",
+    "timestamp": "2026-01-24T11:47:10.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "ab5q9cexv",
+    "title": "FinancialJuice: US urges Bolivia to expel suspected Iranian spies and designate IRGC as a terrorist organization, sources say",
+    "url": "https://www.financialjuice.com/News/9403875/US-urges-Bolivia-to-expel-suspected-Iranian-spies-and-designate-IRGC-as-a-terrorist-organization-sources-say.aspx?xy=rss",
+    "timestamp": "2026-01-24T11:00:05.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "pvbq6z254",
+    "title": "FinancialJuice: US officials also discussing similar efforts in Chile, Peru, and Panama: sources",
+    "url": "https://www.financialjuice.com/News/9403874/US-officials-also-discussing-similar-efforts-in-Chile-Peru-and-Panama-sources.aspx?xy=rss",
+    "timestamp": "2026-01-24T11:00:05.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "xq1x12l7l",
+    "title": "FinancialJuice: Ukraine Russia talks resume in Abu Dhabi source:",
+    "url": "https://www.financialjuice.com/News/9403857/Ukraine-Russia-talks-resume-in-Abu-Dhabi-source.aspx?xy=rss",
+    "timestamp": "2026-01-24T09:21:52.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "a0rkkdufs",
+    "title": "FinancialJuice: Russia carried out massive strike overnight against Ukrainian long-range drone sites and energy facilities : IFAX",
+    "url": "https://www.financialjuice.com/News/9403849/Russia-carried-out-massive-strike-overnight-against-Ukrainian-long-range-drone-sites-and-energy-facilities--IFAX.aspx?xy=rss",
+    "timestamp": "2026-01-24T09:08:17.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "u604xvow0",
+    "title": "FinancialJuice: Russian forces assume control of Starytsya in Ukraine Kharkiv region - RIA",
+    "url": "https://www.financialjuice.com/News/9403848/Russian-forces-assume-control-of-Starytsya-in-Ukraine-Kharkiv-region---RIA.aspx?xy=rss",
+    "timestamp": "2026-01-24T09:06:53.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "mgtlw115h",
+    "title": "FinancialJuice: United States requests Italy to join Gaza security force as founding member",
+    "url": "https://www.financialjuice.com/News/9403827/United-States-requests-Italy-to-join-Gaza-security-force-as-founding-member.aspx?xy=rss",
+    "timestamp": "2026-01-24T08:17:36.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "ksuusoagk",
+    "title": "FinancialJuice: Ukrainian deputy prime minister: at least 1.2 million consumers in Ukraine without power after Russian attack, including over 800,000 in Kyiv",
+    "url": "https://www.financialjuice.com/News/9403825/Ukrainian-deputy-prime-minister-at-least-12-million-consumers-in-Ukraine-without-power-after-Russian-attack-including-over-800000-in-Kyiv.aspx?xy=rss",
+    "timestamp": "2026-01-24T08:09:58.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "0zvt9e8v4",
+    "title": "FinancialJuice: Ukraine air force: Russia attacked Ukraine with 375 drones and 21 missiles",
+    "url": "https://www.financialjuice.com/News/9403814/Ukraine-air-force-Russia-attacked-Ukraine-with-375-drones-and-21-missiles.aspx?xy=rss",
+    "timestamp": "2026-01-24T07:33:53.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "nj7tubg8b",
+    "title": "FinancialJuice: Senior Chinese military officials Zhang Youxia, Liu Zhenli under investigation, Chinese state broadcaster says:",
+    "url": "https://www.financialjuice.com/News/9403813/Senior-Chinese-military-officials-Zhang-Youxia-Liu-Zhenli-under-investigation-Chinese-state-broadcaster-says.aspx?xy=rss",
+    "timestamp": "2026-01-24T07:32:17.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "g92ssg8wa",
+    "title": "FinancialJuice: Ukraine's Zelenskiy : Russian strike on energy proves there must be no delays in air defence supplies, agreements on air defence made with Trump at Davos must be fully implemented",
+    "url": "https://www.financialjuice.com/News/9403811/Ukraines-Zelenskiy--Russian-strike-on-energy-proves-there-must-be-no-delays-in-air-defence-supplies-agreements-on-air-defence-made-with-Trump-at-Davos-must-be-fully-implemented.aspx?xy=rss",
+    "timestamp": "2026-01-24T07:23:47.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "9svjx8ikr",
+    "title": "FinancialJuice: Ukraine's foreign minister: Putin cynically ordered massive missile strike on Ukraine while delegations meeting in Abu Dhabi",
+    "url": "https://www.financialjuice.com/News/9403808/Ukraines-foreign-minister-Putin-cynically-ordered-massive-missile-strike-on-Ukraine-while-delegations-meeting-in-Abu-Dhabi.aspx?xy=rss",
+    "timestamp": "2026-01-24T07:15:33.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "4ybn2rka6",
+    "title": "FinancialJuice: Mayor of Kyiv : nearly 6,000 buildings in Ukraine capital left without heat after Russian attack",
+    "url": "https://www.financialjuice.com/News/9403792/Mayor-of-Kyiv--nearly-6000-buildings-in-Ukraine-capital-left-without-heat-after-Russian-attack.aspx?xy=rss",
+    "timestamp": "2026-01-24T07:08:49.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "1fmncp4rs",
+    "title": "FinancialJuice: Senior Chinese military officials Zhang Youxiia and Liu Zhengli under investigation: Chinese state broadcaster",
+    "url": "https://www.financialjuice.com/News/9403791/Senior-Chinese-military-officials-Zhang-Youxiia-and-Liu-Zhengli-under-investigation-Chinese-state-broadcaster.aspx?xy=rss",
+    "timestamp": "2026-01-24T07:07:52.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "e4r0bchlx",
+    "title": "FinancialJuice: Air India: all flights to and from New York and Newark have been cancelled on 25 and 26 January due to storm Fern",
+    "url": "https://www.financialjuice.com/News/9403790/Air-India-all-flights-to-and-from-New-York-and-Newark-have-been-cancelled-on-25-and-26-January-due-to-storm-Fern.aspx?xy=rss",
+    "timestamp": "2026-01-24T07:03:53.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "ll7th2bsf",
+    "title": "FinancialJuice: Hundreds of thousands of consumers in Ukraine's Chernihiv region remain without power following overnight Russian attack",
+    "url": "https://www.financialjuice.com/News/9403788/Hundreds-of-thousands-of-consumers-in-Ukraines-Chernihiv-region-remain-without-power-following-overnight-Russian-attack.aspx?xy=rss",
+    "timestamp": "2026-01-24T07:00:35.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "w88o6ftud",
+    "title": "FinancialJuice: Pakistan Foreign Office: Deputy Prime Minister Ishaq Dar today received a telephone call from Iranian Foreign Minister Abbas Araghchi",
+    "url": "https://www.financialjuice.com/News/9403787/Pakistan-Foreign-Office-Deputy-Prime-Minister-Ishaq-Dar-today-received-a-telephone-call-from-Iranian-Foreign-Minister-Abbas-Araghchi.aspx?xy=rss",
+    "timestamp": "2026-01-24T06:59:48.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "tma0bnrm9",
+    "title": "FinancialJuice: Iran: Two Islamic State linked men executed for bombing of bus carrying pilgrims",
+    "url": "https://www.financialjuice.com/News/9403780/Iran-Two-Islamic-State-linked-men-executed-for-bombing-of-bus-carrying-pilgrims.aspx?xy=rss",
+    "timestamp": "2026-01-24T06:07:44.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "jw116o8u0",
+    "title": "FinancialJuice: miso: to implement emergency pricing and tier i will curtail export schedules",
+    "url": "https://www.financialjuice.com/News/9403779/miso-to-implement-emergency-pricing-and-tier-i-will-curtail-export-schedules.aspx?xy=rss",
+    "timestamp": "2026-01-24T05:44:39.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "trnqdu30r",
+    "title": "FinancialJuice: North American power grid operator MISO declares maximum generation event due to forced generation outages and below normal temperatures",
+    "url": "https://www.financialjuice.com/News/9403778/North-American-power-grid-operator-MISO-declares-maximum-generation-event-due-to-forced-generation-outages-and-below-normal-temperatures.aspx?xy=rss",
+    "timestamp": "2026-01-24T05:40:35.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "h3ef6gaxp",
+    "title": "FinancialJuice: Pentagon policy document contains no mention of Taiwan",
+    "url": "https://www.financialjuice.com/News/9403582/Pentagon-policy-document-contains-no-mention-of-Taiwan.aspx?xy=rss",
+    "timestamp": "2026-01-24T00:24:36.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "8k09xw6mf",
+    "title": "FinancialJuice: Pentagon policy document expresses interest in updating U.S. force posture on Korean Peninsula",
+    "url": "https://www.financialjuice.com/News/9403581/Pentagon-policy-document-expresses-interest-in-updating-US-force-posture-on-Korean-Peninsula.aspx?xy=rss",
+    "timestamp": "2026-01-24T00:22:04.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "fuy30e906",
+    "title": "FinancialJuice: Pentagon releases policy document calling for more limited U.S. support deterring North Korea",
+    "url": "https://www.financialjuice.com/News/9403580/Pentagon-releases-policy-document-calling-for-more-limited-US-support-deterring-North-Korea.aspx?xy=rss",
+    "timestamp": "2026-01-24T00:22:02.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "mez85cllr",
+    "title": "FinancialJuice: Senior Iranian official: Iran will treat any attack on it as all-out war and respond in hardest way possible",
+    "url": "https://www.financialjuice.com/News/9403559/Senior-Iranian-official-Iran-will-treat-any-attack-on-it-as-all-out-war-and-respond-in-hardest-way-possible.aspx?xy=rss",
+    "timestamp": "2026-01-23T23:59:10.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "akhfoyi9m",
+    "title": "FinancialJuice: US judge rules Trump administration improperly suspended funding for states to support electric vehicle charger infrastructure",
+    "url": "https://www.financialjuice.com/News/9403533/US-judge-rules-Trump-administration-improperly-suspended-funding-for-states-to-support-electric-vehicle-charger-infrastructure.aspx?xy=rss",
+    "timestamp": "2026-01-23T23:27:37.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "lmvyzekv7",
+    "title": "FinancialJuice: South Korea PM Kim: Vance requested Seoul manage issues surrounding online platform Coupang so that no misunderstanding arises - Yonhap",
+    "url": "https://www.financialjuice.com/News/9403499/South-Korea-PM-Kim-Vance-requested-Seoul-manage-issues-surrounding-online-platform-Coupang-so-that-no-misunderstanding-arises---Yonhap.aspx?xy=rss",
+    "timestamp": "2026-01-23T22:45:48.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "e6375j6ul",
+    "title": "FinancialJuice: US Southern Command: conducted lethal kinetic strike on a vessel operated by designated terrorist organizations transiting in Eastern Pacific",
+    "url": "https://www.financialjuice.com/News/9403498/US-Southern-Command-conducted-lethal-kinetic-strike-on-a-vessel-operated-by-designated-terrorist-organizations-transiting-in-Eastern-Pacific.aspx?xy=rss",
+    "timestamp": "2026-01-23T22:39:44.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "5n7l06yfe",
+    "title": "FinancialJuice: South Korea PM Kim: Suggested to U.S. Vice President Vance sending a special envoy to North Korea - media reports",
+    "url": "https://www.financialjuice.com/News/9403497/South-Korea-PM-Kim-Suggested-to-US-Vice-President-Vance-sending-a-special-envoy-to-North-Korea---media-reports.aspx?xy=rss",
+    "timestamp": "2026-01-23T22:39:44.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "vsutel04o",
+    "title": "FinancialJuice: US Southern Command: two narco terrorists were killed and one survived the strike",
+    "url": "https://www.financialjuice.com/News/9403482/US-Southern-Command-two-narco-terrorists-were-killed-and-one-survived-the-strike.aspx?xy=rss",
+    "timestamp": "2026-01-23T22:20:44.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "buqxpoxps",
+    "title": "FinancialJuice: US Southern Command: conducted lethal kinetic strike on a vessel operated by designated terrorist organizations trans",
+    "url": "https://www.financialjuice.com/News/9403481/US-Southern-Command-conducted-lethal-kinetic-strike-on-a-vessel-operated-by-designated-terrorist-organizations-trans.aspx?xy=rss",
+    "timestamp": "2026-01-23T22:20:31.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "az8tgqik5",
     "title": "Wall Street braced for a private credit meltdown. The risk of one is rising",
     "url": "https://www.cnbc.com/2026/01/23/wall-street-private-credit-risk-rising.html",
     "timestamp": "2026-01-23T21:26:18.000Z",
@@ -210,393 +790,13 @@
     "category": "economy"
   },
   {
-    "id": "3y6or1ck4",
-    "title": "EUR/USD soars above 1.1800 as Yen intervention rumors slam Dollar",
-    "url": "https://www.fxstreet.com/news/eur-usd-soars-above-11800-as-yen-intervention-rumors-slam-dollar-202601232113",
-    "timestamp": "2026-01-23T21:13:38.000Z",
-    "source": "FXStreet",
+    "id": "uodmdw1up",
+    "title": "FinancialJuice: US bank deposits rose to $18.623 tln from $18.611 tln in the prior week.",
+    "url": "https://www.financialjuice.com/News/9403406/US-bank-deposits-rose-to-18623-tln-from-18611-tln-in-the-prior-week.aspx?xy=rss",
+    "timestamp": "2026-01-23T21:16:19.000Z",
+    "source": "FinancialJuice",
     "sentiment": "neutral",
     "impact": "medium",
     "category": "forex"
-  },
-  {
-    "id": "ulowob1sq",
-    "title": "Sen. Warren blasts CFPB director for undermining Trump&apos;s credit card affordability push",
-    "url": "https://www.cnbc.com/2026/01/23/warren-cfpb-director-letter-undermining-trump-credit-card-affordability.html",
-    "timestamp": "2026-01-23T20:32:31.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "qdy182ahd",
-    "title": "Gold rockets to $4,988 as USD crashes on Yen intervention rumors",
-    "url": "https://www.fxstreet.com/news/gold-rockets-to-4-988-as-usd-crashes-on-yen-intervention-rumors-202601231928",
-    "timestamp": "2026-01-23T19:28:26.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "dr6p6klvc",
-    "title": "Forecasting the upcoming week: US Dollar slides to four-month low ahead of Fed’s decision",
-    "url": "https://www.fxstreet.com/news/forecasting-the-upcoming-week-us-dollar-slides-to-5-week-low-ahead-of-feds-decision-202601231914",
-    "timestamp": "2026-01-23T19:14:42.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "9junjcm5x",
-    "title": "USD/JPY slumps to multi-week lows after suspected MoF 'rate check'",
-    "url": "https://www.fxstreet.com/news/usd-jpy-slumps-to-multi-week-lows-after-suspected-mof-rate-check-202601231859",
-    "timestamp": "2026-01-23T18:59:50.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "d74rtbtor",
-    "title": "GBP/USD surges to 1.3600, hits four-month high as Dollar selling intensifies",
-    "url": "https://www.fxstreet.com/news/gbp-usd-surges-to-13600-hits-four-month-high-as-dollar-selling-intensifies-202601231813",
-    "timestamp": "2026-01-23T18:13:30.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "r0lfv35py",
-    "title": "There&apos;s a new idea of alpha in the market that big money managers are pursuing",
-    "url": "https://www.cnbc.com/2026/01/23/investing-market-stocks-bonds-gold-cash-commodities.html",
-    "timestamp": "2026-01-23T16:28:47.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "hi65eydgl",
-    "title": "Gold nears $5,000 amid safe-haven demand and a softer US Dollar",
-    "url": "https://www.fxstreet.com/news/gold-pauses-near-record-highs-as-bulls-struggle-below-5-000-202601231205",
-    "timestamp": "2026-01-23T16:28:47.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "ut86zh1y4",
-    "title": "EUR/USD steadies near 1.1750 as mixed US data fail to lift the Greenback",
-    "url": "https://www.fxstreet.com/news/eur-usd-steadies-near-11750-as-mixed-us-data-fail-to-lift-the-greenback-202601231617",
-    "timestamp": "2026-01-23T16:17:16.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "g6iu98xco",
-    "title": "Silver hits all-time high above $100.00",
-    "url": "https://www.fxstreet.com/news/silver-price-forecast-record-all-time-high-above-10000-202601231610",
-    "timestamp": "2026-01-23T16:10:41.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "o5mik4nxe",
-    "title": "GBP/USD jumps above 1.3540 as UK Retail Sales, PMIs surprise higher",
-    "url": "https://www.fxstreet.com/news/gbp-usd-jumps-above-13540-as-uk-retail-sales-pmis-surprise-higher-202601231600",
-    "timestamp": "2026-01-23T16:00:32.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "f4k2xonh9",
-    "title": "US S&amp;P Manufacturing PMI rises to 51.9, Services PMI holds steady at 52.5",
-    "url": "https://www.fxstreet.com/news/us-sp-manufacturing-pmi-rises-to-519-services-pmi-holds-steady-at-525-202601231455",
-    "timestamp": "2026-01-23T14:55:24.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "9j3jmaysn",
-    "title": "USD/CAD drifts lower as Canadian Retail Sales surprise to the upside",
-    "url": "https://www.fxstreet.com/news/usd-cad-drifts-lower-as-canadian-retail-sales-surprise-to-the-upside-202601231439",
-    "timestamp": "2026-01-23T14:39:46.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "d851ohe9o",
-    "title": "EUR/GBP slides as UK PMIs and Retail Sales beat expectations",
-    "url": "https://www.fxstreet.com/news/eur-gbp-slides-as-uk-pmis-and-retail-sales-beat-expectations-202601231327",
-    "timestamp": "2026-01-23T13:27:48.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "hj89agak1",
-    "title": "Capital One is buying startup Brex for $5.15 billion in credit card firm&apos;s latest deal",
-    "url": "https://www.cnbc.com/2026/01/22/capital-one-is-buying-startup-brex-for-5point15-billion-in-credit-card-firms-latest-deal.html",
-    "timestamp": "2026-01-23T12:50:56.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "ceh5rsu4b",
-    "title": "Nvidia’s Huang to visit China as AI chip sales stall",
-    "url": "https://www.cnbc.com/2026/01/23/nvidia-ceo-jensen-huang-china-visit-chip-sales-restrictions.html",
-    "timestamp": "2026-01-23T12:31:43.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "eliwvceal",
-    "title": "EUR/USD steadies near highs, awaiting US flash PMIs",
-    "url": "https://www.fxstreet.com/news/eur-usd-drifts-away-from-highs-ahead-of-flash-pmis-202601230835",
-    "timestamp": "2026-01-23T12:07:51.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "maewn46he",
-    "title": "When is the flash US S&amp;P Global PMI data and how could it affect EUR/USD?",
-    "url": "https://www.fxstreet.com/news/when-is-the-flash-us-sp-global-pmi-data-and-how-could-it-affect-eur-usd-202601231155",
-    "timestamp": "2026-01-23T11:55:34.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "yl79z1ld7",
-    "title": "Gold Price Forecast: XAU/USD pulls back from record highs near $5,000",
-    "url": "https://www.fxstreet.com/news/gold-price-forecast-xau-usd-pulls-back-from-record-highs-near-5-000-202601231154",
-    "timestamp": "2026-01-23T11:54:41.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "jnmi8jt7g",
-    "title": "Pound Sterling outperforms on strong UK Retail Sales, PMI data",
-    "url": "https://www.fxstreet.com/news/pound-sterling-rises-as-uk-retail-sales-unexpectedly-return-to-growth-202601230858",
-    "timestamp": "2026-01-23T11:20:52.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "4d3ap8qp1",
-    "title": " USD/JPY holds losses near 158.00 amid growing intervention rumours ",
-    "url": "https://www.fxstreet.com/news/usd-jpy-holds-losses-near-15800-amid-growing-intervention-rumours-202601231059",
-    "timestamp": "2026-01-23T10:59:02.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "n5vrqwx3z",
-    "title": "Silver Price Forecasts: XAG/USD stalls below the $100.00 psychological level",
-    "url": "https://www.fxstreet.com/news/silver-price-forecasts-xag-usd-stalls-below-the-10000-psychological-level-202601231022",
-    "timestamp": "2026-01-23T10:22:11.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "uykdh1u04",
-    "title": "AUD/USD: Any advance is likely part of a higher range of 0.6810/0.6860 – UOB Group",
-    "url": "https://www.fxstreet.com/news/aud-usd-any-advance-is-likely-part-of-a-higher-range-of-06810-06860-uob-group-202601231008",
-    "timestamp": "2026-01-23T10:08:34.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "1xwooerps",
-    "title": "USD/INR remains firm amid consistent FIIs selling in Indian equity market",
-    "url": "https://www.fxstreet.com/news/usd-inr-trades-firmly-near-lifetime-highs-ahead-of-extended-weekend-in-india-202601230556",
-    "timestamp": "2026-01-23T10:08:24.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "cnrq4det8",
-    "title": "JPY: BoJ upgrades outlook but Yen reaction muted – ING",
-    "url": "https://www.fxstreet.com/news/jpy-boj-upgrades-outlook-but-yen-reaction-muted-ing-202601231003",
-    "timestamp": "2026-01-23T10:03:35.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "55dnnx249",
-    "title": "GBP/USD may not have enough steam to break above 1.3570 – UOB Group",
-    "url": "https://www.fxstreet.com/news/gbp-usd-may-not-have-enough-steam-to-break-above-13570-uob-group-202601230954",
-    "timestamp": "2026-01-23T09:54:02.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "rhhcav9e8",
-    "title": "UK preliminary Composite PMI expands strongly to 53.9 vs. 51.4 prior",
-    "url": "https://www.fxstreet.com/news/when-is-the-uk-services-pmi-and-how-could-it-affect-gbp-usd-202601230727",
-    "timestamp": "2026-01-23T09:37:49.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "htg2c8nw3",
-    "title": "USD/JPY hits channel resistance near 159.45 – Société Générale",
-    "url": "https://www.fxstreet.com/news/usd-jpy-hits-channel-resistance-near-15945-societe-generale-202601230933",
-    "timestamp": "2026-01-23T09:33:37.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "2nbxvw1ly",
-    "title": "Silver price today: Silver rises, according to FXStreet data",
-    "url": "https://www.fxstreet.com/news/silver-price-today-silver-rises-according-to-fxstreet-data-202601230932",
-    "timestamp": "2026-01-23T09:32:21.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "kffp06ztf",
-    "title": "EUR: Europe’s strategic autonomy may support the Euro – ING",
-    "url": "https://www.fxstreet.com/news/eur-europes-strategic-autonomy-may-support-the-euro-ing-202601230931",
-    "timestamp": "2026-01-23T09:31:00.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "51rv89pu0",
-    "title": "EUR/USD: Expected to continue to rise – UOB Group",
-    "url": "https://www.fxstreet.com/news/eur-usd-expected-to-continue-to-rise-uob-group-202601230922",
-    "timestamp": "2026-01-23T09:22:19.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "0srcdqmvw",
-    "title": "Eurozone flash Composite PMI remains steady at 51.5, misses estimates of 51.6",
-    "url": "https://www.fxstreet.com/news/when-are-the-german-eurozone-flash-hcob-pmis-and-how-could-they-affect-eur-usd-202601230632",
-    "timestamp": "2026-01-23T09:08:49.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "hx3rmy4c8",
-    "title": "Gold drifts lower as profit-taking kicks in after a five-day record-setting rally",
-    "url": "https://www.fxstreet.com/news/gold-record-setting-rally-remains-uninterrupted-for-fifth-day-amid-fed-rate-cut-bets-202601230446",
-    "timestamp": "2026-01-23T09:07:49.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "l26nnaoqs",
-    "title": "GBP/JPY retreats below 213.50 amid rumours of a Yen intervention",
-    "url": "https://www.fxstreet.com/news/gbp-jpy-retreats-below-21350-amid-rumours-of-a-yen-intervention-202601230902",
-    "timestamp": "2026-01-23T09:02:00.000Z",
-    "source": "FXStreet",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "5wbwx11uf",
-    "title": "Alibaba-backed startup Moonshot AI&apos;s valuation is up $500 million, sources say, after its rivals IPO in Hong Kong",
-    "url": "https://www.cnbc.com/2026/01/19/alibaba-backed-startup-moonshot-ai-alibabi-backed-startup-chinese-ai-ipo.html",
-    "timestamp": "2026-01-23T06:31:20.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "a3ejobndu",
-    "title": "Rieder odds rising for Fed chair after Trump calls BlackRock executive &apos;very impressive&apos;",
-    "url": "https://www.cnbc.com/2026/01/22/rieder-odds-rising-for-fed-chair-after-trump-calls-blackrock-executive-very-impressive.html",
-    "timestamp": "2026-01-22T18:39:36.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "26pzien8t",
-    "title": "Jamie Dimon issues rare CEO criticism of Trump&apos;s immigration policy: &apos;I don’t like what I’m seeing&apos;",
-    "url": "https://www.cnbc.com/2026/01/21/jamie-dimon-trump-immigration-policy.html",
-    "timestamp": "2026-01-22T16:04:58.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "x8mei5nww",
-    "title": "Jamie Dimon says U.S. should impose Trump&apos;s credit card rate cap in Vermont and Massachusetts ",
-    "url": "https://www.cnbc.com/2026/01/21/jamie-dimon-trump-credit-card-rate-cap-vermont-massachusetts.html",
-    "timestamp": "2026-01-21T21:59:10.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "br0idgegt",
-    "title": "Trump calls for Congress to enact 10% credit card interest rate cap; bank stocks rise",
-    "url": "https://www.cnbc.com/2026/01/21/trump-congress-10percent-credit-card-interest-rate-cap.html",
-    "timestamp": "2026-01-21T20:54:13.000Z",
-    "source": "CNBC Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "stocks"
   }
 ]

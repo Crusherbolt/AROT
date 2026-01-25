@@ -52,8 +52,9 @@ export function useNewsData() {
       // 1. Live Aggregator (Client-Side)
       const feeds = [
         { url: 'https://feeds.finance.yahoo.com/rss/2.0/headline?s=^GSPC,EURUSD=X,BTC-USD,GC=F,CL=F', source: 'Yahoo Finance' },
+        { url: 'https://www.financialjuice.com/feed.ashx?xy=rss', source: 'FinancialJuice' },
         { url: 'https://www.cnbc.com/id/10000664/device/rss/rss.html', source: 'CNBC Finance' },
-        { url: 'https://www.fxstreet.com/rss/news', source: 'FXStreet' }, // The "Squawk" Alternative
+        { url: 'https://www.fxstreet.com/rss/news', source: 'FXStreet' },
         { url: 'https://www.investing.com/rss/news.rss', source: 'Investing.com' }
       ];
 

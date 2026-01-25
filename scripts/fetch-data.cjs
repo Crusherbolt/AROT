@@ -37,12 +37,13 @@ if (!fs.existsSync(DATA_DIR)) {
 }
 
 async function updateNews() {
-    console.log('Fetching Aggregated News (Yahoo, CNBC, FXStreet)...');
+    console.log('Fetching Aggregated News (Yahoo, CNBC, FXStreet, FinancialJuice)...');
     const items = [];
 
     // Aggregation List
     const feeds = [
         { url: 'https://feeds.finance.yahoo.com/rss/2.0/headline?s=^GSPC,EURUSD=X,BTC-USD,GC=F,CL=F', source: 'Yahoo Finance' },
+        { url: 'https://www.financialjuice.com/feed.ashx?xy=rss', source: 'FinancialJuice' },
         { url: 'https://www.cnbc.com/id/10000664/device/rss/rss.html', source: 'CNBC Finance' },
         { url: 'https://www.fxstreet.com/rss/news', source: 'FXStreet' }
     ];
@@ -58,16 +59,17 @@ async function updateNews() {
                 const title = content.match(/<title>(.*?)<\/title>/)?.[1] || 'No Title';
                 const link = content.match(/<link>(.*?)<\/link>/)?.[1] || '#';
                 const pubDate = content.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || new Date().toISOString();
-                const desc = content.match(/<description>(.*?)<\/description>/)?.[1] || '';
 
                 let cat = 'economy';
                 const titleLower = title.toLowerCase();
                 if (titleLower.includes('crypto')) cat = 'crypto';
                 else if (titleLower.includes('stock')) cat = 'stocks';
-                else if (titleLower.includes('gold')) cat = 'commodities';
+                else if (titleLower.includes('gold') || titleLower.includes('oil')) cat = 'commodities';
                 else if (titleLower.includes('eur') || titleLower.includes('usd')) cat = 'forex';
 
-                if (feed.source === 'FXStreet') cat = 'forex'; // Default for FXStreet
+                if (feed.source === 'FXStreet' || feed.source === 'FinancialJuice') {
+                    if (!titleLower.includes('stock')) cat = 'forex';
+                }
 
                 items.push({
                     id: Math.random().toString(36).substr(2, 9),
@@ -87,7 +89,7 @@ async function updateNews() {
 
     // Sort and Save
     items.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    fs.writeFileSync(path.join(DATA_DIR, 'news.json'), JSON.stringify(items.slice(0, 60), null, 2));
+    fs.writeFileSync(path.join(DATA_DIR, 'news.json'), JSON.stringify(items.slice(0, 80), null, 2));
     console.log(`Saved ${items.length} aggregated news items.`);
 }
 
