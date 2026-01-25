@@ -1,0 +1,14 @@
+name: Weekly Data Update
+
+on:
+  schedule:
+    # Run at 08:00 UTC every Saturday
+    - cron: '0 8 * * 6'
+  workflow_dispatch: # Allows manual run from GitHub UI
+
+jobs:
+  trigger-vercel-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Deploy Hook
+        run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
