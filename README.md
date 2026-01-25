@@ -6,7 +6,6 @@
 > **The Ultimate Real-Time Dashboard for Professional Traders**  
 > Aggregating Gamma Exposure (GEX), COT Positioning, AAII Sentiment, and "Squawk" News Feeds into one actionable interface.
 
-[![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=arot-tech)](https://arot.tech)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 🌟 Features Breakdown
@@ -37,12 +36,16 @@ Decode the "Commitments of Traders" reports efficiently.
 
 | Dashboard Overview | Gamma Analysis |
 |:---:|:---:|
-| ![Dashboard](public/screenshots/dashboard.png) | ![Gamma](public/screenshots/gamma.png) |
+| ![Dashboard](<img width="825" height="912" alt="image" src="https://github.com/user-attachments/assets/6d9635de-86d3-4cf7-b569-aae7abb51456" />
+) | ![Gamma](<img width="821" height="855" alt="image" src="https://github.com/user-attachments/assets/7b6607fb-39f8-4042-a7ab-e86c872bd032" />
+) |
 | *Live Market Overview & Feeds* | *Deep Option Analytics* |
 
 | Live News Feed | COT Reports |
 |:---:|:---:|
-| ![News](public/screenshots/news.png) | ![COT](public/screenshots/cot.png) |
+| ![News](<img width="843" height="626" alt="image" src="https://github.com/user-attachments/assets/dfcafcb8-72dc-4683-9f74-b1dc8a7df62a" />
+) | ![COT](<img width="819" height="913" alt="image" src="https://github.com/user-attachments/assets/863b4f92-12da-436e-83cb-347b3b78a355" />
+) |
 | *FinancialJuice & FXStreet Aggregation* | *Institutional Tracking* |
 
 ---
