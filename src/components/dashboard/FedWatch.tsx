@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CustomBadge } from '@/components/ui/custom-badge';
 import { Activity, Clock } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
+import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 export function FedWatch() {
   const [loading, setLoading] = useState(true);
@@ -81,7 +82,35 @@ export function FedWatch() {
         </div>
 
         <div className="pt-2 border-t border-border">
-          <p className="text-xs text-center text-muted-foreground">Target Rate: <span className="font-mono text-foreground font-medium">{data.targetRate}%</span></p>
+          <p className="text-xs text-center text-muted-foreground mb-2">Target Rate: <span className="font-mono text-foreground font-medium">{data.targetRate}%</span></p>
+          
+          <div className="h-48 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={[
+                { name: 'Cut', val: data.probabilityCut, color: 'hsl(var(--bullish))' },
+                { name: 'Hold', val: data.probabilityHold, color: 'hsl(var(--muted-foreground))' },
+                { name: 'Hike', val: data.probabilityHike, color: 'hsl(var(--bearish))' }
+              ]}>
+                <XAxis dataKey="name" fontSize={10} tickLine={false} axisLine={false} />
+                <Tooltip 
+                  cursor={{fill: 'transparent'}}
+                  contentStyle={{ backgroundColor: 'hsl(var(--card))', borderRadius: '8px', border: '1px solid hsl(var(--border))' }}
+                  formatter={(val: number) => [`${val}%`, 'Probability']}
+                />
+                <Bar dataKey="val" radius={[4, 4, 0, 0]}>
+                  {
+                    [
+                        { name: 'Cut', val: data.probabilityCut, color: 'hsl(var(--bullish))' },
+                        { name: 'Hold', val: data.probabilityHold, color: 'hsl(var(--muted-foreground))' },
+                        { name: 'Hike', val: data.probabilityHike, color: 'hsl(var(--bearish))' }
+                    ].map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))
+                  }
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
     </div>

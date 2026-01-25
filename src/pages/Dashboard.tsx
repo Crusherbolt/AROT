@@ -7,12 +7,13 @@ import { Link } from 'react-router-dom';
 import { formatDistanceToNow } from 'date-fns';
 import { FedWatch } from '@/components/dashboard/FedWatch';
 import { AAIIWidget } from '@/components/dashboard/AAIIWidget';
+import { MarketOverviewWidget } from '@/components/dashboard/MarketOverviewWidget';
 
 export default function Dashboard() {
   const { data: cotData, lastUpdate } = useCOTData();
   const { news } = useNewsData();
 
-  const topMovers = cotData.slice(0, 6).map(item => ({
+  const topMovers = cotData.slice(0, 7).map(item => ({
     name: item.commodity,
     code: item.code,
     change: (item.commercialNet / item.openInterest) * 100,
@@ -168,6 +169,11 @@ export default function Dashboard() {
         {/* AAII Sentiment Widget (New) */}
         <div className="lg:col-span-1 rounded-lg border border-border bg-card p-0 overflow-hidden">
           <AAIIWidget />
+        </div>
+
+        {/* Market Overview Widget (New - Fills Empty Slot) */}
+        <div className="lg:col-span-1 rounded-lg border border-border bg-card p-0 overflow-hidden">
+          <MarketOverviewWidget />
         </div>
       </div>
 

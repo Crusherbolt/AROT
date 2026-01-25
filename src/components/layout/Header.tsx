@@ -18,11 +18,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="flex items-center gap-2 mr-8">
-          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary">
-            <span className="font-mono font-bold text-primary-foreground text-sm">A</span>
-          </div>
-          <span className="font-bold text-lg tracking-tight">AROT</span>
-          <span className="text-xs text-muted-foreground font-mono">v1.0</span>
+        <div className="flex items-center gap-2 mr-8">
+          <span className="font-bold text-lg tracking-tight hover:text-primary transition-colors cursor-default">AROT</span>
+        </div>
         </div>
 
         <nav className="flex items-center gap-1 flex-1">

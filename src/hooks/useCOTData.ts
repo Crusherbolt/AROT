@@ -121,14 +121,75 @@ export function useCOTData(commodityCode?: string) {
     setLoading(true);
     setError(null);
 
-    // Simulate network delay
-    setTimeout(() => {
-      const result = generateMockCOTData();
-      setData(result.data);
-      setHistorical(result.historical);
-      setLastUpdate(result.lastUpdate);
-      setLoading(false);
-    }, 600);
+    try {
+      const response = await fetch('/data/cot.json');
+      if (response.ok) {
+        const localData = await response.json();
+
+        if (localData && localData.length > 0) {
+          const newHistorical: Record<string, COTRecord[]> = {};
+
+          // Process flat list into historical map
+          localData.forEach((row: any) => {
+            // Map commodity name to code (simple mapping for now or use name as code)
+            // The OpenDataSoft dataset uses specific names. We'll attempt to map to our known codes if possible or just group by name.
+            // We'll use the 'commodity' field from JSON as key/code for simplicity in this generated mode.
+            const code = row.commodity;
+            if (!newHistorical[code]) newHistorical[code] = [];
+
+            newHistorical[code].push({
+              date: row.date,
+              commodity: row.commodity,
+              code: code,
+              category: 'commodities', // Default
+              commercialLong: 0,
+              commercialShort: 0,
+              commercialNet: row.commercialNet,
+              nonCommercialLong: 0,
+              nonCommercialShort: 0,
+              nonCommercialNet: row.nonCommercialNet,
+              nonReportableLong: 0,
+              nonReportableShort: 0,
+              nonReportableNet: 0,
+              openInterest: row.openInterest,
+              changeLong: 0,
+              changeShort: 0,
+              changeNet: 0,
+              changeOI: 0,
+              percentOILong: 50,
+              percentOIShort: 50,
+              spreadPositions: 0
+            });
+          });
+
+          setHistorical(newHistorical);
+
+          // Set latest data
+          const latestItems: COTRecord[] = [];
+          Object.keys(newHistorical).forEach(key => {
+            // Sort date desc
+            newHistorical[key].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+            latestItems.push(newHistorical[key][0]);
+          });
+
+          setData(latestItems);
+          setLastUpdate(new Date());
+          setLoading(false);
+          return;
+        }
+      }
+      throw new Error('Local data empty or failed');
+    } catch (e) {
+      console.log('Using simulation for COT (Local fetch failed or empty)', e);
+      // Simulate network delay
+      setTimeout(() => {
+        const result = generateMockCOTData();
+        setData(result.data);
+        setHistorical(result.historical);
+        setLastUpdate(result.lastUpdate);
+        setLoading(false);
+      }, 600);
+    }
   }, [commodityCode]);
 
   useEffect(() => {

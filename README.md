@@ -77,3 +77,7 @@ The `dist` folder after `npm run build` can be deployed to any static hosting se
 ## 📄 License
 
 © 2024 AROT.tech. All rights reserved.
+
+
+
+npm run update-data

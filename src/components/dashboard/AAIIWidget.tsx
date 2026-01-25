@@ -4,23 +4,40 @@ import { CustomBadge } from '@/components/ui/custom-badge';
 import { TrendingUp, TrendingDown, Minus, Clock } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { Link } from 'react-router-dom';
+import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
 export function AAIIWidget() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data fetch
-    setTimeout(() => {
-      setData({
-        bullish: 44.5,
-        bearish: 25.3,
-        neutral: 30.2,
-        bullChange: 2.1,
-        lastUpdate: new Date()
-      });
-      setLoading(false);
-    }, 800);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/data/aaii.json');
+        if (response.ok) {
+          const localData = await response.json();
+          setData(localData);
+          setLoading(false);
+          return;
+        }
+      } catch (e) {
+        console.warn('Failed to fetch local AAII data, using mock');
+      }
+
+      // Fallback
+      setTimeout(() => {
+        setData({
+          bullish: 44.5,
+          bearish: 25.3,
+          neutral: 30.2,
+          bullChange: 2.1,
+          lastUpdate: new Date()
+        });
+        setLoading(false);
+      }, 800);
+    };
+
+    fetchData();
   }, []);
 
   if (loading || !data) return <div className="h-full bg-card rounded-lg border border-border p-4 animate-pulse" />;
@@ -62,6 +79,27 @@ export function AAIIWidget() {
               <div className="text-xs text-muted-foreground">Neutral</div>
               <div className="font-bold text-foreground">{data.neutral}%</div>
             </div>
+          </div>
+          
+          <div className="h-48 mt-4 w-full">
+            <h4 className="text-[10px] text-muted-foreground uppercase tracking-wider mb-2">Trend (Spread)</h4>
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={Array.from({length: 12}).map((_, i) => ({ val: 10 + Math.random() * 20 }))}>
+                 <defs>
+                  <linearGradient id="miniGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
+                  </linearGradient>
+                </defs>
+                <Area 
+                  type="monotone" 
+                  dataKey="val" 
+                  stroke="hsl(var(--primary))" 
+                  fill="url(#miniGradient)" 
+                  strokeWidth={2} 
+                />
+              </AreaChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </div>
