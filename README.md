@@ -1,6 +1,7 @@
 # AROT - Advanced Research on Options & Traders 📊
 
-![Project Banner](public/screenshots/banner.png)
+![Project Banner](<img width="1099" height="905" alt="image" src="https://github.com/user-attachments/assets/47c795f3-9cd5-4e08-9716-50fae6bf536d" />
+)
 
 > **The Ultimate Real-Time Dashboard for Professional Traders**  
 > Aggregating Gamma Exposure (GEX), COT Positioning, AAII Sentiment, and "Squawk" News Feeds into one actionable interface.
