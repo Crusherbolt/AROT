@@ -20,28 +20,19 @@ export function useNewsData() {
   const [error, setError] = useState<string | null>(null);
 
   const generateMockNews = () => {
-    // ... (Mock generation logic same as before) ...
-    // Simplified for brevity in this overwrite, but crucial to keep valid fallback
-    const sources = ['Bloomberg', 'Reuters', 'FinancialJuice', 'FXStreet', 'CNBC', 'ZeroHedge'];
-    const headlines = [
-      { t: "Fed's Powell signals potential rate cut in upcoming meeting", c: 'economy', s: 'bullish', i: 'high' },
-      { t: "Oil prices surge as geopolitical tensions rise in Middle East", c: 'commodities', s: 'bullish', i: 'high' },
-      { t: "ECB holds rates steady, warns of persistent inflation", c: 'forex', s: 'bearish', i: 'medium' },
-      { t: "Tech stocks rally on better-than-expected earnings reports", c: 'stocks', s: 'bullish', i: 'medium' },
-      { t: "Bitcoin reclaims $65k level as ETF inflows accelerate", c: 'crypto', s: 'bullish', i: 'medium' }
-    ];
-    // Fill up to 20 items
-    return Array.from({ length: 20 }).map((_, i) => ({
+    // ... (Mock logic can be simplified or kept as fallback)
+    const sources = ['FinancialJuice', 'Reuters', 'Bloomberg', 'FXStreet', 'CNBC'];
+    return Array.from({ length: 15 }).map((_, i) => ({
       id: `news-${i}`,
-      timestamp: new Date(Date.now() - Math.random() * 86400000),
-      title: headlines[i % headlines.length].t,
-      source: sources[Math.floor(Math.random() * sources.length)],
-      impact: headlines[i % headlines.length].i as any,
-      category: headlines[i % headlines.length].c as any,
-      sentiment: headlines[i % headlines.length].s as any,
+      timestamp: new Date(Date.now() - Math.random() * 3600000), // Recent
+      title: "Mock Headline: Market volatility increases ahead of Fed decision",
+      source: sources[i % sources.length],
+      impact: 'medium',
+      category: 'economy',
+      sentiment: 'neutral',
       summary: "Full story available at source...",
-      url: `https://www.google.com/search?q=${encodeURIComponent(headlines[i % headlines.length].t + " finance news")}`
-    })).sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+      url: "#"
+    })).sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime()) as NewsItem[];
   };
 
   const fetchNews = useCallback(async () => {
@@ -62,7 +53,10 @@ export function useNewsData() {
         fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`)
           .then(res => res.json())
           .then(data => ({ ...data, _siteSource: feed.source }))
-          .catch(() => null)
+          .catch(err => {
+            console.warn(`Failed to fetch ${feed.source}`, err);
+            return null;
+          })
       );
 
       const results = await Promise.all(fetchPromises);
@@ -75,21 +69,30 @@ export function useNewsData() {
             const title = (item.title || '').toLowerCase();
             const src = (data._siteSource || '').toLowerCase();
 
-            if (title.includes('crypto') || title.includes('bitcoin')) cat = 'crypto';
+            if (title.includes('crypto')) cat = 'crypto';
             else if (title.includes('stock') || title.includes('dow') || title.includes('nasdaq')) cat = 'stocks';
             else if (title.includes('oil') || title.includes('gold')) cat = 'commodities';
             else if (title.includes('eur') || title.includes('usd') || title.includes('fx')) cat = 'forex';
 
-            // FXStreet is mostly Forex/Macro
-            if (src.includes('fxstreet')) {
-              if (!cat || cat === 'economy') cat = 'forex';
+            if (src.includes('fxstreet') || src.includes('financialjuice')) {
+              if (!cat || cat === 'economy') cat = 'forex'; // Default for Squawk sources
             }
 
             const impact: NewsItem['impact'] = title.includes('fed') || title.includes('rate') || title.includes('inflation') || title.includes('gdp') ? 'high' : 'medium';
 
+            // TIMEZONE FIX: rss2json often returns 'YYYY-MM-DD HH:mm:ss' (UTC) without Z.
+            // Browser interprets this as Local. We must force it to be UTC.
+            let pubDate = item.pubDate;
+            if (typeof pubDate === 'string' && !pubDate.includes('Z') && !pubDate.includes('+')) {
+              // If it looks like '2026-01-25 06:00:00', treat as UTC
+              pubDate = pubDate.replace(' ', 'T') + 'Z';
+            }
+            let timestamp = new Date(pubDate);
+            if (isNaN(timestamp.getTime())) timestamp = new Date(item.pubDate); // Fallback
+
             allItems.push({
               id: item.guid || Math.random().toString(36),
-              timestamp: new Date(item.pubDate),
+              timestamp: timestamp,
               title: item.title,
               source: data._siteSource || 'News',
               impact: impact,
@@ -103,8 +106,19 @@ export function useNewsData() {
       });
 
       if (allItems.length > 0) {
-        allItems.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
-        // Dedup
+        // Sort Logic: Time first, then Priority
+        allItems.sort((a, b) => {
+          const timeDiff = b.timestamp.getTime() - a.timestamp.getTime();
+          if (Math.abs(timeDiff) < 120000) { // If within 2 minutes
+            // Give preference to FinancialJuice and Reuters
+            const scoreA = (a.source === 'FinancialJuice' || a.source === 'Reuters') ? 1 : 0;
+            const scoreB = (b.source === 'FinancialJuice' || b.source === 'Reuters') ? 1 : 0;
+            return scoreB - scoreA;
+          }
+          return timeDiff;
+        });
+
+        // Dedup by Title
         const unique = allItems.filter((item, index, self) =>
           index === self.findIndex((t) => (t.title === item.title))
         );
@@ -113,42 +127,21 @@ export function useNewsData() {
         return;
       }
 
-      // 2. Local Snapshot Fallback
+      // 2. Fallback to Local Snapshot
       const response = await fetch('/data/news.json');
       if (response.ok) {
         const localNews = await response.json();
         if (localNews && localNews.length > 0) {
           const formatted = localNews.map((n: any) => ({ ...n, timestamp: new Date(n.timestamp) }));
+          // Ensure snapshot is sorted too
+          formatted.sort((a: any, b: any) => b.timestamp.getTime() - a.timestamp.getTime());
           setNews(formatted);
           setLoading(false);
           return;
         }
       }
 
-      // 3. Supabase Fallback
-      const { data: dbNews } = await (supabase
-        .from('news' as any)
-        .select('*')
-        .order('timestamp', { ascending: false })
-        .limit(50)) as any;
-
-      if (dbNews && dbNews.length > 0) {
-        const formattedNews: NewsItem[] = dbNews.map((item: any) => ({
-          id: item.id,
-          timestamp: new Date(item.timestamp),
-          title: item.title,
-          source: item.source || 'Unknown',
-          impact: item.impact || 'low',
-          category: item.category || 'economy',
-          sentiment: item.sentiment || 'neutral',
-          summary: item.summary,
-          url: item.url,
-          image: item.image
-        }));
-        setNews(formattedNews);
-      } else {
-        setNews(generateMockNews());
-      }
+      setNews(generateMockNews());
     } catch (err) {
       console.warn('News fetch failed:', err);
       setNews(generateMockNews());

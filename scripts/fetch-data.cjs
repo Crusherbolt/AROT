@@ -58,7 +58,14 @@ async function updateNews() {
                 const content = match[1];
                 const title = content.match(/<title>(.*?)<\/title>/)?.[1] || 'No Title';
                 const link = content.match(/<link>(.*?)<\/link>/)?.[1] || '#';
-                const pubDate = content.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || new Date().toISOString();
+                let pubDate = content.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || new Date().toISOString();
+
+                // Check for relative time? RSS usually absolute.
+                // Ensure Javascript parses it correctly. RSS standard is usually fine.
+                // If it's a string, we keep it. Client will re-parse properly from JSON.
+                // But for sorting HERE, we need Date object.
+                let timestamp = new Date(pubDate);
+                if (isNaN(timestamp.getTime())) timestamp = new Date();
 
                 let cat = 'economy';
                 const titleLower = title.toLowerCase();
@@ -75,7 +82,7 @@ async function updateNews() {
                     id: Math.random().toString(36).substr(2, 9),
                     title: title.replace(/<!\[CDATA\[|\]\]>/g, ''),
                     url: link,
-                    timestamp: new Date(pubDate).toISOString(),
+                    timestamp: timestamp.toISOString(), // Standardize to ISO
                     source: feed.source,
                     sentiment: 'neutral',
                     impact: 'medium',
