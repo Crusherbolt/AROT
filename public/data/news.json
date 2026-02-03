@@ -1,6 +1,86 @@
 [
   {
-    "id": "03e54rq9d",
+    "id": "jtob9tgm3",
+    "title": "FinancialJuice: Intel CEO: China tech industry has poor man way to lead in AI despite lack of key chipmaking tools - Cisco AI Summit $INTC",
+    "url": "https://www.financialjuice.com/News/9418969/Intel-CEO-China-tech-industry-has-poor-man-way-to-lead-in-AI-despite-lack-of-key-chipmaking-tools---Cisco-AI-Summit-INTC.aspx?xy=rss",
+    "timestamp": "2026-02-03T18:01:08.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "dzvm5bhzg",
+    "title": "FinancialJuice: Alphabet plots big expansion in India as the US restrains visas. $GOOGL",
+    "url": "https://www.financialjuice.com/News/9418965/Alphabet-plots-big-expansion-in-India-as-the-US-restrains-visas-GOOGL.aspx?xy=rss",
+    "timestamp": "2026-02-03T17:51:43.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "t9yoggybk",
+    "title": "FinancialJuice: Nvidia CEO: AI will lead to cheaper energy costs. $NVDA",
+    "url": "https://www.financialjuice.com/News/9418964/Nvidia-CEO-AI-will-lead-to-cheaper-energy-costs-NVDA.aspx?xy=rss",
+    "timestamp": "2026-02-03T17:50:48.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "pnnpqqlv8",
+    "title": "FinancialJuice: Intel's Tan: Customers are expressing interest in 18A. $INTC",
+    "url": "https://www.financialjuice.com/News/9418963/Intels-Tan-Customers-are-expressing-interest-in-18A-INTC.aspx?xy=rss",
+    "timestamp": "2026-02-03T17:49:54.000Z",
+    "source": "FinancialJuice",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "h1xxtfryv",
+    "title": "Silver’s runaway rally becomes ‘death trap’ for Reddit’s retail crowd",
+    "url": "https://finance.yahoo.com/news/silver-runaway-rally-becomes-death-082333354.html?.tsrc=rss",
+    "timestamp": "2026-02-03T17:48:51.000Z",
+    "source": "Yahoo Finance",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "economy"
+  },
+  {
+    "id": "hg72envf6",
+    "title": "Investment Firm Maytree Bought Over $11 Million in AXTI. Is the Stock a Buy?",
+    "url": "https://www.fool.com/coverage/filings/2026/02/03/investment-firm-maytree-bought-over-usd11-million-in-axti-is-the-stock-a-buy/?.tsrc=rss",
+    "timestamp": "2026-02-03T17:42:32.000Z",
+    "source": "Yahoo Finance",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "stocks"
+  },
+  {
+    "id": "p2vk8be11",
+    "title": "Dow Jones Industrial Average mixed as Palantir soars, PayPal plunges on earnings flood",
+    "url": "https://www.fxstreet.com/news/dow-jones-industrial-average-mixed-as-palantir-soars-paypal-plunges-on-earnings-flood-202602031742",
+    "timestamp": "2026-02-03T17:42:08.000Z",
+    "source": "FXStreet",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "xq5vcyeqo",
+    "title": "Oil Edges Higher After US Navy Shoots Down Iranian Drone",
+    "url": "https://finance.yahoo.com/news/oil-dips-iran-tensions-ease-062453497.html?.tsrc=rss",
+    "timestamp": "2026-02-03T17:37:52.000Z",
+    "source": "Yahoo Finance",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "commodities"
+  },
+  {
+    "id": "a7ysi4qbs",
     "title": "FinancialJuice: Altman: I do worry about the US not leading on open-source AI.",
     "url": "https://www.financialjuice.com/News/9418939/Altman-I-do-worry-about-the-US-not-leading-on-open-source-AI.aspx?xy=rss",
     "timestamp": "2026-02-03T17:36:58.000Z",
@@ -10,7 +90,17 @@
     "category": "forex"
   },
   {
-    "id": "5gqdpuk1a",
+    "id": "s3yu35jca",
+    "title": "Upside Gold Corp. Delivers First Exploration Update for the Kena Gold-Copper Property",
+    "url": "https://finance.yahoo.com/news/upside-gold-corp-delivers-first-173648526.html?.tsrc=rss",
+    "timestamp": "2026-02-03T17:36:48.000Z",
+    "source": "Yahoo Finance",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "commodities"
+  },
+  {
+    "id": "psvvi3f81",
     "title": "'Buying the dip': Gold rebounds after brutal sell-off",
     "url": "https://www.euronews.com/business/2026/02/02/trumps-fed-pick-sparks-brutal-gold-and-silver-sell-off?utm_source=yahoo&amp;utm_campaign=feeds_business_articles_2024&amp;utm_medium=referral&amp;.tsrc=rss",
     "timestamp": "2026-02-03T17:35:13.000Z",
@@ -20,7 +110,7 @@
     "category": "commodities"
   },
   {
-    "id": "cbx0600ao",
+    "id": "s5en627gt",
     "title": "FinancialJuice: Government funding bill clears procedural hurdle in US House, setting up vote on passage.",
     "url": "https://www.financialjuice.com/News/9418938/Government-funding-bill-clears-procedural-hurdle-in-US-House-setting-up-vote-on-passage.aspx?xy=rss",
     "timestamp": "2026-02-03T17:35:04.000Z",
@@ -30,7 +120,7 @@
     "category": "forex"
   },
   {
-    "id": "uqxtt7ys0",
+    "id": "7sgn7rym0",
     "title": "This Vanguard ETF Has Doubled the S&amp;P 500's Returns Since the Start of 2025. Is It a Buy Now?",
     "url": "https://www.fool.com/investing/2026/02/03/this-vanguard-etf-has-doubled-the-sp-500s-returns/?.tsrc=rss",
     "timestamp": "2026-02-03T17:35:00.000Z",
@@ -40,7 +130,17 @@
     "category": "economy"
   },
   {
-    "id": "vat4wzsyx",
+    "id": "p9mfv1dts",
+    "title": "China: PPI deflation eases further – Standard Chartered",
+    "url": "https://www.fxstreet.com/news/china-ppi-deflation-eases-further-standard-chartered-202602031734",
+    "timestamp": "2026-02-03T17:34:00.000Z",
+    "source": "FXStreet",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "t9srmpf7k",
     "title": "Stock market today: Nasdaq, S&amp;P 500 slide as investors digest flood of tech earnings, government shutdown",
     "url": "https://finance.yahoo.com/news/live/stock-market-today-nasdaq-sp-500-slide-as-investors-digest-flood-of-tech-earnings-government-shutdown-173327941.html?.tsrc=rss",
     "timestamp": "2026-02-03T17:33:27.000Z",
@@ -50,7 +150,7 @@
     "category": "stocks"
   },
   {
-    "id": "g9ft8vkjv",
+    "id": "2k64ipac8",
     "title": "Bank of America's blunt 3-word note on Alphabet stock before earnings",
     "url": "https://www.thestreet.com/investing/stocks/bank-of-americas-blunt-3-word-note-on-alphabet-stock-before-earnings?.tsrc=rss",
     "timestamp": "2026-02-03T17:33:00.000Z",
@@ -60,7 +160,7 @@
     "category": "stocks"
   },
   {
-    "id": "aiisvlvar",
+    "id": "ticja2v2j",
     "title": "Trump Welcomes China To 'Make A Great Deal' On Venezuelan Oil, Suggests India Is Already 'Coming In'",
     "url": "https://finance.yahoo.com/news/trump-welcomes-china-great-deal-173101544.html?.tsrc=rss",
     "timestamp": "2026-02-03T17:31:01.000Z",
@@ -70,7 +170,7 @@
     "category": "commodities"
   },
   {
-    "id": "zfgu50lx8",
+    "id": "qyhfojfdp",
     "title": "Dow Hits Record, Nasdaq Sinks as Tech Stocks Retreat",
     "url": "https://finance.yahoo.com/news/dow-hits-record-nasdaq-sinks-173009749.html?.tsrc=rss",
     "timestamp": "2026-02-03T17:30:09.000Z",
@@ -80,7 +180,7 @@
     "category": "stocks"
   },
   {
-    "id": "e5bnnrdwa",
+    "id": "svf9he2bl",
     "title": "Seizert Capital Partners Buys Another $15 Million of Auto Parts Juggernaut LKQ",
     "url": "https://www.fool.com/coverage/filings/2026/02/03/seizert-capital-partners-buys-another-usd15-million-of-auto-parts-juggernaut-lkq/?.tsrc=rss",
     "timestamp": "2026-02-03T17:25:40.000Z",
@@ -90,7 +190,7 @@
     "category": "economy"
   },
   {
-    "id": "hif44x1bi",
+    "id": "d4i0n2cnl",
     "title": "FinancialJuice: OpenAI's Altman: The upper limit is full AI businesses.",
     "url": "https://www.financialjuice.com/News/9418926/OpenAIs-Altman-The-upper-limit-is-full-AI-businesses.aspx?xy=rss",
     "timestamp": "2026-02-03T17:24:39.000Z",
@@ -100,7 +200,7 @@
     "category": "forex"
   },
   {
-    "id": "7xoztm0dy",
+    "id": "djj3tuhsc",
     "title": "FinancialJuice: An Iranian Shahed-139 drone was taken down by an F-35.",
     "url": "https://www.financialjuice.com/News/9418925/An-Iranian-Shahed-139-drone-was-taken-down-by-an-F-35.aspx?xy=rss",
     "timestamp": "2026-02-03T17:23:43.000Z",
@@ -110,7 +210,7 @@
     "category": "forex"
   },
   {
-    "id": "a0nejhtb0",
+    "id": "fufomggsr",
     "title": "US refiners struggle to absorb sudden surge in Venezuelan oil imports",
     "url": "https://finance.yahoo.com/news/us-refiners-struggle-absorb-sudden-172129456.html?.tsrc=rss",
     "timestamp": "2026-02-03T17:21:29.000Z",
@@ -120,7 +220,7 @@
     "category": "commodities"
   },
   {
-    "id": "ajd40cjx2",
+    "id": "i7mtt0wp0",
     "title": "Bitcoin Drops Below $76,000 With Traders Pivoting Back to Metals",
     "url": "https://finance.yahoo.com/news/bitcoin-stalls-weak-rebound-options-064450212.html?.tsrc=rss",
     "timestamp": "2026-02-03T17:19:22.000Z",
@@ -130,7 +230,17 @@
     "category": "economy"
   },
   {
-    "id": "26642ccag",
+    "id": "sta0z9oqr",
+    "title": "NZD/USD rebounds amid USD pullback, RBNZ tightening expectations",
+    "url": "https://www.fxstreet.com/news/nzd-usd-rebounds-amid-usd-pullback-rbnz-tightening-expectations-202602031716",
+    "timestamp": "2026-02-03T17:16:52.000Z",
+    "source": "FXStreet",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "forex"
+  },
+  {
+    "id": "vhbn8x5pk",
     "title": "Goldman Sees Buybacks Picking Up In 2026",
     "url": "https://finance.yahoo.com/news/goldman-sees-buybacks-picking-2026-171335445.html?.tsrc=rss",
     "timestamp": "2026-02-03T17:13:35.000Z",
@@ -140,7 +250,7 @@
     "category": "commodities"
   },
   {
-    "id": "jtsex7fbs",
+    "id": "6iukwg5a0",
     "title": "FinancialJuice: US Official: US military shot down an Iranian drone that approached US Navy aircraft carrier USS Lincoln in the Arabian Sea.",
     "url": "https://www.financialjuice.com/News/9418891/US-Official-US-military-shot-down-an-Iranian-drone-that-approached-US-Navy-aircraft-carrier-USS-Lincoln-in-the-Arabian-Sea.aspx?xy=rss",
     "timestamp": "2026-02-03T17:12:56.000Z",
@@ -150,7 +260,7 @@
     "category": "forex"
   },
   {
-    "id": "i1bjddfz2",
+    "id": "lanuf6v4a",
     "title": "FinancialJuice: The US House is struggling to advance the major federal funding bill, voting continues.",
     "url": "https://www.financialjuice.com/News/9418890/The-US-House-is-struggling-to-advance-the-major-federal-funding-bill-voting-continues.aspx?xy=rss",
     "timestamp": "2026-02-03T17:11:37.000Z",
@@ -160,7 +270,7 @@
     "category": "forex"
   },
   {
-    "id": "aowegx04z",
+    "id": "zia3r4eha",
     "title": "FinancialJuice: Iran wants to change venue and format of nuclear talks with the US - Axios.",
     "url": "https://www.financialjuice.com/News/9418876/Iran-wants-to-change-venue-and-format-of-nuclear-talks-with-the-US---Axios.aspx?xy=rss",
     "timestamp": "2026-02-03T17:01:01.000Z",
@@ -170,7 +280,7 @@
     "category": "forex"
   },
   {
-    "id": "bw8s6ttsj",
+    "id": "dnbvu9i0c",
     "title": "US Equity Indexes Mixed in Midday Trading as Technology Weighs",
     "url": "https://finance.yahoo.com/news/us-equity-indexes-mixed-midday-165929994.html?.tsrc=rss",
     "timestamp": "2026-02-03T16:59:29.000Z",
@@ -180,7 +290,17 @@
     "category": "economy"
   },
   {
-    "id": "8w5zvigm8",
+    "id": "3wjnd9x2p",
+    "title": "White House Moves On Clarity Act; Cathie Wood Boosts Crypto Stance",
+    "url": "https://finance.yahoo.com/m/f07e1835-f75f-3132-b2a1-0dcb7c3d34e1/white-house-moves-on-clarity.html?.tsrc=rss",
+    "timestamp": "2026-02-03T16:58:39.000Z",
+    "source": "Yahoo Finance",
+    "sentiment": "neutral",
+    "impact": "medium",
+    "category": "crypto"
+  },
+  {
+    "id": "xc55lo9kb",
     "title": "Gold bounces but stocks struggle",
     "url": "https://finance.yahoo.com/news/equities-metals-oil-rebound-asia-024307705.html?.tsrc=rss",
     "timestamp": "2026-02-03T16:54:50.000Z",
@@ -190,7 +310,7 @@
     "category": "stocks"
   },
   {
-    "id": "448akcu9y",
+    "id": "nnnp60sob",
     "title": "Stock Market Today: Dow Slips While Walmart Hits $1 Trillion Market Cap; Palantir Pops (Live Coverage)",
     "url": "https://finance.yahoo.com/m/ef588fd5-c678-37b0-9cd7-c1ffa5e83dc7/stock-market-today%3A-dow-slips.html?.tsrc=rss",
     "timestamp": "2026-02-03T16:49:52.000Z",
@@ -200,7 +320,7 @@
     "category": "stocks"
   },
   {
-    "id": "pyiyprgrp",
+    "id": "tav92rtda",
     "title": "No Title",
     "url": "https://www.financialjuice.com/News/9418859/The-vessel-did-not-enter-Iranian-internal-territorial-waters-Vessel-was-escorted-by-US-warship---Maritime-Risk-Management-Group-Vanguard.aspx?xy=rss",
     "timestamp": "2026-02-03T16:47:04.000Z",
@@ -210,7 +330,7 @@
     "category": "forex"
   },
   {
-    "id": "pp97boagi",
+    "id": "i6wkff0zp",
     "title": "No Title",
     "url": "https://www.financialjuice.com/News/9418858/US-flagged-vessel-Stena-Imperative-was-approached-by-three-pairs-of-Iranian-gunboats-in-strait-of-Hormuz---Maritime-Sources.aspx?xy=rss",
     "timestamp": "2026-02-03T16:47:00.000Z",
@@ -220,7 +340,7 @@
     "category": "forex"
   },
   {
-    "id": "aj1us3rs0",
+    "id": "337m1lghf",
     "title": "Gold rebounds after sharp correction, eyes $5,000 resistance",
     "url": "https://www.fxstreet.com/news/gold-rebounds-sharply-from-four-week-lows-as-technical-buying-dominates-202602031101",
     "timestamp": "2026-02-03T16:39:47.000Z",
@@ -230,7 +350,7 @@
     "category": "forex"
   },
   {
-    "id": "35h4pm6xw",
+    "id": "6bck066ub",
     "title": "PepsiCo Earnings Beat as It Plans Price Cuts. The Stock Is Rising.",
     "url": "https://finance.yahoo.com/m/b095d60f-6454-3477-950a-f4328d15e958/pepsico-earnings-beat-as-it.html?.tsrc=rss",
     "timestamp": "2026-02-03T16:38:00.000Z",
@@ -240,7 +360,7 @@
     "category": "stocks"
   },
   {
-    "id": "7tfjm0o39",
+    "id": "g6exny53r",
     "title": "Germany: Growth recovery expected in 2026 – BNP Paribas",
     "url": "https://www.fxstreet.com/news/germany-growth-recovery-expected-in-2026-bnp-paribas-202602031637",
     "timestamp": "2026-02-03T16:37:00.000Z",
@@ -250,7 +370,7 @@
     "category": "forex"
   },
   {
-    "id": "x2fb9a4m5",
+    "id": "fixcg4ij8",
     "title": "No Title",
     "url": "https://www.financialjuice.com/News/9418838/Marathon-purchased-two-cargoes-of-Venezuelan-crude-at-the-end-of-January---Executives.aspx?xy=rss",
     "timestamp": "2026-02-03T16:30:30.000Z",
@@ -260,7 +380,7 @@
     "category": "forex"
   },
   {
-    "id": "s0a5sl9qe",
+    "id": "zoj3buu5t",
     "title": "3 Things Every Palantir (PLTR) Investor Needs To Know",
     "url": "https://www.fool.com/investing/2026/02/03/x-things-every-palantir-investor-needs-to-know/?.tsrc=rss",
     "timestamp": "2026-02-03T16:25:00.000Z",
@@ -270,47 +390,7 @@
     "category": "economy"
   },
   {
-    "id": "u86s8pm2i",
-    "title": "Gold Rallies With Silver as Historic Rout Lures Back Dip Buyers",
-    "url": "https://finance.yahoo.com/news/gold-claws-back-ground-dramatic-001147611.html?.tsrc=rss",
-    "timestamp": "2026-02-03T16:23:21.000Z",
-    "source": "Yahoo Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "commodities"
-  },
-  {
-    "id": "09g0tgyw0",
-    "title": "Their Boss Is Offering Them The Coffee Shop For $65K. It Feels Like A Sign, But 'If It's Truly So Low-Maintenance, Why Would They Sell?'",
-    "url": "https://finance.yahoo.com/news/boss-offering-them-coffee-shop-161608088.html?.tsrc=rss",
-    "timestamp": "2026-02-03T16:16:08.000Z",
-    "source": "Yahoo Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "w0esr3y7p",
-    "title": "Crypto Currents: Markets face liquidity strain amid regulatory shifts",
-    "url": "https://finance.yahoo.com/news/crypto-currents-markets-face-liquidity-161521325.html?.tsrc=rss",
-    "timestamp": "2026-02-03T16:15:21.000Z",
-    "source": "Yahoo Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "crypto"
-  },
-  {
-    "id": "xf8fm3trm",
-    "title": "Crescent Energy (CRGY) Valuation Revisited After Fresh Analyst Coverage And Oil Sector Concerns",
-    "url": "https://finance.yahoo.com/news/crescent-energy-crgy-valuation-revisited-161315218.html?.tsrc=rss",
-    "timestamp": "2026-02-03T16:13:15.000Z",
-    "source": "Yahoo Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "commodities"
-  },
-  {
-    "id": "yb4icqe27",
+    "id": "h8sscv59c",
     "title": "FinancialJuice: Nvidia is adopting Dassault's model-based systems engineering. $NVDA",
     "url": "https://www.financialjuice.com/News/9418818/Nvidia-is-adopting-Dassaults-model-based-systems-engineering-NVDA.aspx?xy=rss",
     "timestamp": "2026-02-03T16:10:52.000Z",
@@ -320,7 +400,7 @@
     "category": "forex"
   },
   {
-    "id": "ulm5taofk",
+    "id": "pnehag8zc",
     "title": "FinancialJuice: Dassault and Nvidia to build architecture for AI across industries. $NVDA",
     "url": "https://www.financialjuice.com/News/9418817/Dassault-and-Nvidia-to-build-architecture-for-AI-across-industries-NVDA.aspx?xy=rss",
     "timestamp": "2026-02-03T16:09:05.000Z",
@@ -330,7 +410,7 @@
     "category": "forex"
   },
   {
-    "id": "363qu4dak",
+    "id": "095qqylye",
     "title": "FinancialJuice: Dassault and Nvidia partner to build an industrial AI platform. $NVDA",
     "url": "https://www.financialjuice.com/News/9418816/Dassault-and-Nvidia-partner-to-build-an-industrial-AI-platform-NVDA.aspx?xy=rss",
     "timestamp": "2026-02-03T16:07:23.000Z",
@@ -340,7 +420,7 @@
     "category": "forex"
   },
   {
-    "id": "kujdny5bh",
+    "id": "j6kw86pwh",
     "title": "Canada: Tariff removals bring relief – RBC",
     "url": "https://www.fxstreet.com/news/canada-tariff-removals-bring-relief-rbc-202602031603",
     "timestamp": "2026-02-03T16:03:00.000Z",
@@ -350,17 +430,7 @@
     "category": "forex"
   },
   {
-    "id": "6tse4i5up",
-    "title": "Bitcoin Could Drop Below $60K, Says Galaxy Analyst—Here's Why",
-    "url": "https://decrypt.co/356789/bitcoin-could-drop-below-60k-galaxy-analyst-heres-why?.tsrc=rss",
-    "timestamp": "2026-02-03T16:02:44.000Z",
-    "source": "Yahoo Finance",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "economy"
-  },
-  {
-    "id": "ddkr1odbs",
+    "id": "hccb6fchg",
     "title": "No Title",
     "url": "https://www.financialjuice.com/News/9418811/The-US-Treasury-to-sell-105-bln-4-week-bills-on-February-5th-to-settle-on-February-10th.aspx?xy=rss",
     "timestamp": "2026-02-03T16:01:21.000Z",
@@ -370,7 +440,7 @@
     "category": "forex"
   },
   {
-    "id": "e6v96oy3l",
+    "id": "p6ctejcg7",
     "title": "No Title",
     "url": "https://www.financialjuice.com/News/9418805/Fitch-Ratings-forecasts-the-UKs-inflation-outlook-to-be-more-benign-this-year-and-for-the-Bank-of-England-to-respond-with-three-rate-cuts-in-2026.aspx?xy=rss",
     "timestamp": "2026-02-03T15:56:38.000Z",
@@ -380,7 +450,7 @@
     "category": "forex"
   },
   {
-    "id": "batrr5xz4",
+    "id": "sizzsonr0",
     "title": "FinancialJuice: BLS is not collecting February CPI data, per US Economic Research's Wilcox, cited by Semofar Reporter on X.",
     "url": "https://www.financialjuice.com/News/9418804/BLS-is-not-collecting-February-CPI-data-per-US-Economic-Researchs-Wilcox-cited-by-Semofar-Reporter-on-X.aspx?xy=rss",
     "timestamp": "2026-02-03T15:55:09.000Z",
@@ -390,7 +460,7 @@
     "category": "forex"
   },
   {
-    "id": "uiddi71pv",
+    "id": "tr92t9cmo",
     "title": "FinancialJuice: Fitch Ratings: UK consumer spending to remain weak in 2026 as job worries rise.",
     "url": "https://www.financialjuice.com/News/9418802/Fitch-Ratings-UK-consumer-spending-to-remain-weak-in-2026-as-job-worries-rise.aspx?xy=rss",
     "timestamp": "2026-02-03T15:54:12.000Z",
@@ -400,7 +470,7 @@
     "category": "forex"
   },
   {
-    "id": "g9vvlnonj",
+    "id": "pqtkhwike",
     "title": "FinancialJuice: Spokesperson for NATO military headquarters Shape: NATO has started military planning for an Arctic sentry mission.",
     "url": "https://www.financialjuice.com/News/9418801/Spokesperson-for-NATO-military-headquarters-Shape-NATO-has-started-military-planning-for-an-Arctic-sentry-mission.aspx?xy=rss",
     "timestamp": "2026-02-03T15:49:04.000Z",
@@ -410,7 +480,7 @@
     "category": "forex"
   },
   {
-    "id": "ietx3s31a",
+    "id": "uymv4hdtz",
     "title": "GBP/USD holds in a tight range as thin data keeps trading subdued",
     "url": "https://www.fxstreet.com/news/gbp-usd-holds-in-a-tight-range-as-thin-data-keeps-trading-subdued-202602031547",
     "timestamp": "2026-02-03T15:47:03.000Z",
@@ -420,7 +490,7 @@
     "category": "forex"
   },
   {
-    "id": "184bpqwc0",
+    "id": "asfgzxw45",
     "title": "USD: Arctic chill freezes greenback – NAB",
     "url": "https://www.fxstreet.com/news/usd-arctic-chill-freezes-greenback-nab-202602031535",
     "timestamp": "2026-02-03T15:35:00.000Z",
@@ -430,7 +500,7 @@
     "category": "forex"
   },
   {
-    "id": "eq9s396r8",
+    "id": "biid9393e",
     "title": "EUR/JPY climbs on Eurozone monetary stability, Japan election uncertainty weighs",
     "url": "https://www.fxstreet.com/news/eur-jpy-climbs-on-eurozone-monetary-stability-japan-election-uncertainty-weighs-202602031528",
     "timestamp": "2026-02-03T15:28:46.000Z",
@@ -440,7 +510,7 @@
     "category": "forex"
   },
   {
-    "id": "uf88tf7nt",
+    "id": "nbsvwwpfg",
     "title": "FinancialJuice: US House Speaker Johnson: The House will approve moving forward with legislation on Tuesday to bring an end to the short government shutdown.",
     "url": "https://www.financialjuice.com/News/9418742/US-House-Speaker-Johnson-The-House-will-approve-moving-forward-with-legislation-on-Tuesday-to-bring-an-end-to-the-short-government-shutdown.aspx?xy=rss",
     "timestamp": "2026-02-03T15:26:15.000Z",
@@ -450,7 +520,7 @@
     "category": "forex"
   },
   {
-    "id": "rs2qq4w08",
+    "id": "7sz5qo2p4",
     "title": "FinancialJuice: Fear &amp; Greed Index: 45/100 - Neutral",
     "url": "https://www.financialjuice.com/News/9418739/Fear--Greed-Index-45100---Neutral.aspx?xy=rss",
     "timestamp": "2026-02-03T15:18:09.000Z",
@@ -460,7 +530,7 @@
     "category": "forex"
   },
   {
-    "id": "e6ie4f7b6",
+    "id": "38xi83xc2",
     "title": "FinancialJuice: Crypto Fear &amp; Greed Index: 17/100 - Extreme Fear",
     "url": "https://www.financialjuice.com/News/9418735/Crypto-Fear--Greed-Index-17100---Extreme-Fear.aspx?xy=rss",
     "timestamp": "2026-02-03T15:17:48.000Z",
@@ -470,7 +540,7 @@
     "category": "forex"
   },
   {
-    "id": "qkfcuxe2i",
+    "id": "lszfs3kxi",
     "title": "No Title",
     "url": "https://www.financialjuice.com/News/9418716/Major-builders-said-to-weigh-plan-for-1-million-Trump-homes.aspx?xy=rss",
     "timestamp": "2026-02-03T15:15:01.000Z",
@@ -480,7 +550,7 @@
     "category": "forex"
   },
   {
-    "id": "9gdpv62ao",
+    "id": "akivkuail",
     "title": "FinancialJuice: US plans to issue a licence for companies to pump Venezuelan oil.",
     "url": "https://www.financialjuice.com/News/9418715/US-plans-to-issue-a-licence-for-companies-to-pump-Venezuelan-oil.aspx?xy=rss",
     "timestamp": "2026-02-03T15:12:40.000Z",
@@ -490,7 +560,7 @@
     "category": "forex"
   },
   {
-    "id": "6tayqb88e",
+    "id": "9kztsz732",
     "title": "FinancialJuice: UBS House View on Fed - FJElite",
     "url": "https://www.financialjuice.com/News/9418714/UBS-House-View-on-Fed---FJElite.aspx?xy=rss",
     "timestamp": "2026-02-03T15:06:04.000Z",
@@ -500,7 +570,7 @@
     "category": "forex"
   },
   {
-    "id": "sm5b4o6me",
+    "id": "ajs0ee96n",
     "title": "AUD: RBA rate hike signals ongoing tightening – BNY",
     "url": "https://www.fxstreet.com/news/aud-rba-rate-hike-signals-ongoing-tightening-bny-202602031506",
     "timestamp": "2026-02-03T15:06:00.000Z",
@@ -510,7 +580,7 @@
     "category": "forex"
   },
   {
-    "id": "bpf1zjfr5",
+    "id": "n28wxvr0g",
     "title": "Fed’s Barkin: Current US government shutdown will only cause a few days of delay",
     "url": "https://www.fxstreet.com/news/feds-barkin-current-us-government-shutdown-will-only-cause-a-few-days-of-delay-202602031459",
     "timestamp": "2026-02-03T14:59:18.000Z",
@@ -520,7 +590,7 @@
     "category": "forex"
   },
   {
-    "id": "3zlzemwe8",
+    "id": "gb270rn7h",
     "title": "FinancialJuice: US rachets up pressure on Iraq over post of Prime Minister.",
     "url": "https://www.financialjuice.com/News/9418689/US-rachets-up-pressure-on-Iraq-over-post-of-Prime-Minister.aspx?xy=rss",
     "timestamp": "2026-02-03T14:58:14.000Z",
@@ -530,7 +600,7 @@
     "category": "forex"
   },
   {
-    "id": "tv4ljec07",
+    "id": "qe8swq5xz",
     "title": "FinancialJuice: Goldman Sachs on USD: Positioning Cleansed, Expect Gradual Retracement - FJElite",
     "url": "https://www.financialjuice.com/News/9418688/Goldman-Sachs-on-USD-Positioning-Cleansed-Expect-Gradual-Retracement---FJElite.aspx?xy=rss",
     "timestamp": "2026-02-03T14:54:25.000Z",
@@ -540,7 +610,7 @@
     "category": "forex"
   },
   {
-    "id": "pq376tp1k",
+    "id": "2mrx3ux54",
     "title": "FinancialJuice: Deutsche Bank: What is driving high-frequency FX? - FJElite",
     "url": "https://www.financialjuice.com/News/9418674/Deutsche-Bank-What-is-driving-high-frequency-FX---FJElite.aspx?xy=rss",
     "timestamp": "2026-02-03T14:47:23.000Z",
@@ -550,7 +620,7 @@
     "category": "forex"
   },
   {
-    "id": "1nzcyk933",
+    "id": "31btr7o8e",
     "title": "FinancialJuice: Fed's Barkin: Open to a conversation about any aspect of the balance sheet or other Fed operations.",
     "url": "https://www.financialjuice.com/News/9418673/Feds-Barkin-Open-to-a-conversation-about-any-aspect-of-the-balance-sheet-or-other-Fed-operations.aspx?xy=rss",
     "timestamp": "2026-02-03T14:47:09.000Z",
@@ -560,7 +630,7 @@
     "category": "forex"
   },
   {
-    "id": "94bl460g1",
+    "id": "692q8enzr",
     "title": "FinancialJuice: Fed's Barkin: The size of balance sheet is odd to focus on solely because it includes so many things like cash in circulation and the Treasury general account, along with bank reserves.",
     "url": "https://www.financialjuice.com/News/9418672/Feds-Barkin-The-size-of-balance-sheet-is-odd-to-focus-on-solely-because-it-includes-so-many-things-like-cash-in-circulation-and-the-Treasury-general-account-along-with-bank-reserves.aspx?xy=rss",
     "timestamp": "2026-02-03T14:46:56.000Z",
@@ -570,7 +640,7 @@
     "category": "forex"
   },
   {
-    "id": "9outcfa2n",
+    "id": "h8bjlcisx",
     "title": "FinancialJuice: Fed's Barkin: Fed is facing a different question now, with inflation above target, than the Greenspan-led Fed did in the 1990s.",
     "url": "https://www.financialjuice.com/News/9418671/Feds-Barkin-Fed-is-facing-a-different-question-now-with-inflation-above-target-than-the-Greenspan-led-Fed-did-in-the-1990s.aspx?xy=rss",
     "timestamp": "2026-02-03T14:46:35.000Z",
@@ -580,7 +650,7 @@
     "category": "forex"
   },
   {
-    "id": "5dssb4wtv",
+    "id": "odu3ydlmv",
     "title": "FinancialJuice: Fed's Barkin: Productivity is coming not just from artificial intelligence, but from companies wanting to limit hiring, adapting to past labor shortages.",
     "url": "https://www.financialjuice.com/News/9418670/Feds-Barkin-Productivity-is-coming-not-just-from-artificial-intelligence-but-from-companies-wanting-to-limit-hiring-adapting-to-past-labor-shortages.aspx?xy=rss",
     "timestamp": "2026-02-03T14:46:26.000Z",
@@ -590,7 +660,7 @@
     "category": "forex"
   },
   {
-    "id": "lv6i1f3fv",
+    "id": "ru9cuga5w",
     "title": "FinancialJuice: Fed's Barkin: Business perceptions about pricing power have decreased.",
     "url": "https://www.financialjuice.com/News/9418669/Feds-Barkin-Business-perceptions-about-pricing-power-have-decreased.aspx?xy=rss",
     "timestamp": "2026-02-03T14:46:05.000Z",
@@ -600,7 +670,7 @@
     "category": "forex"
   },
   {
-    "id": "v391bdngx",
+    "id": "p7v4tn9qj",
     "title": "FinancialJuice: Fed's Barkin: I will do the job Congress set for me, and I trust that is what the new Fed chair will do as well.",
     "url": "https://www.financialjuice.com/News/9418668/Feds-Barkin-I-will-do-the-job-Congress-set-for-me-and-I-trust-that-is-what-the-new-Fed-chair-will-do-as-well.aspx?xy=rss",
     "timestamp": "2026-02-03T14:45:55.000Z",
@@ -610,7 +680,7 @@
     "category": "forex"
   },
   {
-    "id": "3ipeomg2r",
+    "id": "bf6zonzfa",
     "title": "FinancialJuice: Fed's Barkin: I hear overwhelmingly from businesses that demand is fine, not frothy.",
     "url": "https://www.financialjuice.com/News/9418667/Feds-Barkin-I-hear-overwhelmingly-from-businesses-that-demand-is-fine-not-frothy.aspx?xy=rss",
     "timestamp": "2026-02-03T14:45:49.000Z",
@@ -620,7 +690,7 @@
     "category": "forex"
   },
   {
-    "id": "q2puuki4b",
+    "id": "72it06ro4",
     "title": "FinancialJuice: Fed's Barkin: I am concerned about risks to employment and inflation.",
     "url": "https://www.financialjuice.com/News/9418666/Feds-Barkin-I-am-concerned-about-risks-to-employment-and-inflation.aspx?xy=rss",
     "timestamp": "2026-02-03T14:45:27.000Z",
@@ -630,7 +700,7 @@
     "category": "forex"
   },
   {
-    "id": "almq0w3la",
+    "id": "qubmoas53",
     "title": "FinancialJuice: Walmart surpasses $1 trln in market value for first time. $WMT",
     "url": "https://www.financialjuice.com/News/9418660/Walmart-surpasses-1-trln-in-market-value-for-first-time-WMT.aspx?xy=rss",
     "timestamp": "2026-02-03T14:41:16.000Z",
@@ -640,7 +710,7 @@
     "category": "forex"
   },
   {
-    "id": "7kvp7nyhr",
+    "id": "1cq9t0a8b",
     "title": "CAD: Trading near fair value – Scotiabank",
     "url": "https://www.fxstreet.com/news/cad-trading-near-fair-value-scotiabank-202602031438",
     "timestamp": "2026-02-03T14:38:26.000Z",
@@ -650,7 +720,7 @@
     "category": "forex"
   },
   {
-    "id": "s1wh8su5a",
+    "id": "tbbgglowc",
     "title": "FinancialJuice: US Sentiment: Govt Shutdown Delays NFP - FJElite",
     "url": "https://www.financialjuice.com/News/9418659/US-Sentiment-Govt-Shutdown-Delays-NFP---FJElite.aspx?xy=rss",
     "timestamp": "2026-02-03T14:33:01.000Z",
@@ -660,7 +730,7 @@
     "category": "forex"
   },
   {
-    "id": "sb8vwze3n",
+    "id": "wssvin9aa",
     "title": "FinancialJuice: Mexico's President Sheinbaum: Mexico is willing to mediate in the US-Cuba dispute.",
     "url": "https://www.financialjuice.com/News/9418658/Mexicos-President-Sheinbaum-Mexico-is-willing-to-mediate-in-the-US-Cuba-dispute.aspx?xy=rss",
     "timestamp": "2026-02-03T14:32:49.000Z",
@@ -670,7 +740,7 @@
     "category": "forex"
   },
   {
-    "id": "btm7en2nr",
+    "id": "n6fhfll01",
     "title": "FinancialJuice: MOO Imbalance",
     "url": "https://www.financialjuice.com/News/9418651/MOO-Imbalance.aspx?xy=rss",
     "timestamp": "2026-02-03T14:30:35.000Z",
@@ -680,7 +750,7 @@
     "category": "forex"
   },
   {
-    "id": "pdwy25w8a",
+    "id": "whfeugm8f",
     "title": "WTI Price Forecast: Bullish 21-day and 50-day SMA crossover keeps upside bias intact",
     "url": "https://www.fxstreet.com/news/wti-price-forecast-bullish-21-day-and-50-day-sma-crossover-keeps-upside-bias-intact-202602031427",
     "timestamp": "2026-02-03T14:27:14.000Z",
@@ -690,7 +760,7 @@
     "category": "forex"
   },
   {
-    "id": "6dxhu06ft",
+    "id": "xpuln8w2j",
     "title": "FinancialJuice: Leaders think they will get there “We’ll have the votes,” says Speaker Johnson - Politico Reporter on X.",
     "url": "https://www.financialjuice.com/News/9418634/Leaders-think-they-will-get-there-Well-have-the-votes-says-Speaker-Johnson---Politico-Reporter-on-X.aspx?xy=rss",
     "timestamp": "2026-02-03T14:16:29.000Z",
@@ -700,7 +770,7 @@
     "category": "forex"
   },
   {
-    "id": "em78dx4rt",
+    "id": "sg4r1r6ms",
     "title": "FinancialJuice: House GOP leaders are still trying to wrangle several remaining GOP hardliners for the funding package rule today, per sources - Politico Reporter on X",
     "url": "https://www.financialjuice.com/News/9418619/House-GOP-leaders-are-still-trying-to-wrangle-several-remaining-GOP-hardliners-for-the-funding-package-rule-today-per-sources---Politico-Reporter-on-X.aspx?xy=rss",
     "timestamp": "2026-02-03T14:15:51.000Z",
@@ -710,7 +780,7 @@
     "category": "forex"
   },
   {
-    "id": "e3860953s",
+    "id": "y284fjmqd",
     "title": "GBP: Spreads richen across curve – TD Securities",
     "url": "https://www.fxstreet.com/news/gbp-spreads-richen-across-curve-td-securities-202602031409",
     "timestamp": "2026-02-03T14:09:06.000Z",
@@ -720,80 +790,10 @@
     "category": "forex"
   },
   {
-    "id": "8ocbgagj8",
+    "id": "56llbc7nh",
     "title": "FinancialJuice: China is willing to expand innovation &amp; AI cooperation with Vietnam",
     "url": "https://www.financialjuice.com/News/9418583/China-is-willing-to-expand-innovation--AI-cooperation-with-Vietnam.aspx?xy=rss",
     "timestamp": "2026-02-03T14:05:55.000Z",
-    "source": "FinancialJuice",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "3fv6pkxl4",
-    "title": "FinancialJuice: ECB: Forex reserves rose €200 mln to €332.3 bln",
-    "url": "https://www.financialjuice.com/News/9418582/ECB-Forex-reserves-rose-200-mln-to-3323-bln.aspx?xy=rss",
-    "timestamp": "2026-02-03T14:02:50.000Z",
-    "source": "FinancialJuice",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "zl5toh8h0",
-    "title": "FinancialJuice: EU to offer US critical minerals partnership to counter China.",
-    "url": "https://www.financialjuice.com/News/9418578/EU-to-offer-US-critical-minerals-partnership-to-counter-China.aspx?xy=rss",
-    "timestamp": "2026-02-03T14:01:36.000Z",
-    "source": "FinancialJuice",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "uhkg3jqb8",
-    "title": "FinancialJuice: ECB bond holdings under PEPP €1.42 tln as of last week.",
-    "url": "https://www.financialjuice.com/News/9418567/ECB-bond-holdings-under-PEPP-142-tln-as-of-last-week.aspx?xy=rss",
-    "timestamp": "2026-02-03T14:00:46.000Z",
-    "source": "FinancialJuice",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "o3sv3ipis",
-    "title": "FinancialJuice: Effective fed funds rate: 3.64% February 2nd vs 3.64% January 30th",
-    "url": "https://www.financialjuice.com/News/9418566/Effective-fed-funds-rate-364-February-2nd-vs-364-January-30th.aspx?xy=rss",
-    "timestamp": "2026-02-03T14:00:43.000Z",
-    "source": "FinancialJuice",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "iz8dw4vht",
-    "title": "FinancialJuice: ECB settled €1,851.3 bln public-sector bond purchases.",
-    "url": "https://www.financialjuice.com/News/9418565/ECB-settled-18513-bln-public-sector-bond-purchases.aspx?xy=rss",
-    "timestamp": "2026-02-03T14:00:33.000Z",
-    "source": "FinancialJuice",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "97k4j8ii0",
-    "title": "FinancialJuice: ECB settled €244.7 bln corporate bond purchases.",
-    "url": "https://www.financialjuice.com/News/9418561/ECB-settled-2447-bln-corporate-bond-purchases.aspx?xy=rss",
-    "timestamp": "2026-02-03T14:00:21.000Z",
-    "source": "FinancialJuice",
-    "sentiment": "neutral",
-    "impact": "medium",
-    "category": "forex"
-  },
-  {
-    "id": "n4kk9rbid",
-    "title": "FinancialJuice: US Trade Representative Greer: I see signals of a manufacturing boom.",
-    "url": "https://www.financialjuice.com/News/9418560/US-Trade-Representative-Greer-I-see-signals-of-a-manufacturing-boom.aspx?xy=rss",
-    "timestamp": "2026-02-03T13:57:41.000Z",
     "source": "FinancialJuice",
     "sentiment": "neutral",
     "impact": "medium",
