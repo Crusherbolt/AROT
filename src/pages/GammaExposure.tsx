@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useGammaData, GammaData, StrikeData } from '@/hooks/useGammaData';
+import { AIForecast } from '@/components/dashboard/AIForecast';
 import { useETFFlowData } from '@/hooks/useETFFlowData';
 import { DataCard } from '@/components/ui/DataCard';
 import { CustomBadge } from '@/components/ui/custom-badge';
@@ -12,7 +13,7 @@ import {
   Search, RefreshCw, Activity, Target, 
   ArrowUp, ArrowDown, TrendingUp, AlertTriangle,
   CheckCircle, XCircle, Lightbulb, EyeOff, Eye,
-  Layers, BarChart3, GitCompare, Plus, X, Calendar
+  Layers, BarChart3, GitCompare, Plus, X, Calendar, Star
 } from 'lucide-react';
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
@@ -23,6 +24,102 @@ import {
 } from 'recharts';
 
 const popularTickers = ['SPY', 'QQQ', 'AAPL', 'TSLA', 'NVDA', 'AMZN', 'MSFT', 'META'];
+
+// Zacks-style ranking data (sample/mock data - Expanded)
+const zacksRankings: Record<string, { value: number; growth: number; momentum: number; vgm: string; overall: number }> = {
+  // Mag 7
+  'SPY': { value: 3, growth: 3, momentum: 2, vgm: 'B', overall: 2 },
+  'QQQ': { value: 4, growth: 1, momentum: 1, vgm: 'A', overall: 2 },
+  'AAPL': { value: 3, growth: 2, momentum: 2, vgm: 'B', overall: 3 },
+  'TSLA': { value: 5, growth: 1, momentum: 1, vgm: 'C', overall: 3 },
+  'NVDA': { value: 4, growth: 1, momentum: 1, vgm: 'A', overall: 1 },
+  'AMZN': { value: 4, growth: 2, momentum: 2, vgm: 'B', overall: 2 },
+  'MSFT': { value: 3, growth: 2, momentum: 2, vgm: 'A', overall: 1 },
+  'META': { value: 3, growth: 1, momentum: 2, vgm: 'A', overall: 2 },
+  'GOOGL': { value: 3, growth: 2, momentum: 3, vgm: 'B', overall: 3 },
+  'GOOG': { value: 3, growth: 2, momentum: 3, vgm: 'B', overall: 3 },
+  
+  // Semis
+  'AMD': { value: 4, growth: 1, momentum: 1, vgm: 'A', overall: 2 },
+  'AVGO': { value: 3, growth: 1, momentum: 2, vgm: 'A', overall: 2 },
+  'MU': { value: 3, growth: 1, momentum: 1, vgm: 'A', overall: 1 },
+  'INTC': { value: 5, growth: 5, momentum: 5, vgm: 'F', overall: 5 },
+  'QCOM': { value: 3, growth: 2, momentum: 3, vgm: 'C', overall: 3 },
+  'TXN': { value: 3, growth: 3, momentum: 3, vgm: 'D', overall: 3 },
+  'LRCX': { value: 3, growth: 1, momentum: 2, vgm: 'B', overall: 2 },
+  'AMAT': { value: 3, growth: 2, momentum: 2, vgm: 'B', overall: 2 },
+  'SMCI': { value: 4, growth: 1, momentum: 1, vgm: 'A', overall: 1 },
+  
+  // Tech/Software
+  'CRM': { value: 3, growth: 2, momentum: 3, vgm: 'B', overall: 3 },
+  'ADBE': { value: 4, growth: 2, momentum: 3, vgm: 'C', overall: 3 },
+  'ORCL': { value: 3, growth: 2, momentum: 2, vgm: 'B', overall: 2 },
+  'CSCO': { value: 3, growth: 4, momentum: 4, vgm: 'D', overall: 4 },
+  'PLTR': { value: 5, growth: 1, momentum: 1, vgm: 'B', overall: 2 },
+  'IBM': { value: 3, growth: 3, momentum: 2, vgm: 'C', overall: 3 },
+  
+  // Banks/Finance
+  'JPM': { value: 2, growth: 3, momentum: 2, vgm: 'A', overall: 2 },
+  'BAC': { value: 2, growth: 3, momentum: 3, vgm: 'B', overall: 3 },
+  'WFC': { value: 2, growth: 3, momentum: 2, vgm: 'B', overall: 3 },
+  'GS': { value: 3, growth: 3, momentum: 2, vgm: 'B', overall: 3 },
+  'MS': { value: 3, growth: 3, momentum: 2, vgm: 'B', overall: 3 },
+  'V': { value: 4, growth: 2, momentum: 2, vgm: 'C', overall: 3 },
+  'MA': { value: 4, growth: 2, momentum: 2, vgm: 'C', overall: 3 },
+  
+  // Retail/Consumer
+  'WMT': { value: 2, growth: 3, momentum: 2, vgm: 'A', overall: 2 },
+  'TGT': { value: 2, growth: 4, momentum: 4, vgm: 'C', overall: 3 },
+  'COST': { value: 4, growth: 2, momentum: 1, vgm: 'B', overall: 2 },
+  'HD': { value: 3, growth: 3, momentum: 3, vgm: 'C', overall: 3 },
+  'NKE': { value: 3, growth: 4, momentum: 4, vgm: 'D', overall: 4 },
+  'SBUX': { value: 3, growth: 3, momentum: 3, vgm: 'C', overall: 3 },
+  
+  // Energy/Industrial
+  'XOM': { value: 1, growth: 3, momentum: 2, vgm: 'A', overall: 1 },
+  'CVX': { value: 2, growth: 3, momentum: 3, vgm: 'B', overall: 3 },
+  'CAT': { value: 3, growth: 2, momentum: 2, vgm: 'B', overall: 3 },
+  'BA': { value: 5, growth: 4, momentum: 5, vgm: 'F', overall: 5 },
+  'GE': { value: 3, growth: 2, momentum: 1, vgm: 'B', overall: 2 },
+  
+  // Pharma
+  'LLY': { value: 5, growth: 1, momentum: 1, vgm: 'B', overall: 1 },
+  'JNJ': { value: 3, growth: 4, momentum: 4, vgm: 'D', overall: 4 },
+  'PFE': { value: 2, growth: 4, momentum: 5, vgm: 'C', overall: 3 },
+  'MRK': { value: 3, growth: 3, momentum: 3, vgm: 'C', overall: 3 },
+
+  // Other Popular
+  'DIS': { value: 3, growth: 3, momentum: 2, vgm: 'C', overall: 3 },
+  'NFLX': { value: 4, growth: 1, momentum: 1, vgm: 'B', overall: 2 },
+  'COIN': { value: 4, growth: 1, momentum: 1, vgm: 'A', overall: 1 },
+  'MSTR': { value: 5, growth: 1, momentum: 1, vgm: 'B', overall: 2 },
+  'IWM': { value: 3, growth: 2, momentum: 2, vgm: 'B', overall: 3 },
+  'TLT': { value: 3, growth: 3, momentum: 3, vgm: 'D', overall: 3 },
+  'SLV': { value: 2, growth: 3, momentum: 2, vgm: 'B', overall: 2 },
+  'GLD': { value: 2, growth: 3, momentum: 3, vgm: 'B', overall: 2 },
+};
+
+const getZacksLabel = (score: number): { label: string; color: string } => {
+  switch (score) {
+    case 1: return { label: 'Strong Buy', color: 'text-bullish bg-bullish/20' };
+    case 2: return { label: 'Buy', color: 'text-green-400 bg-green-400/20' };
+    case 3: return { label: 'Hold', color: 'text-warning bg-warning/20' };
+    case 4: return { label: 'Sell', color: 'text-orange-400 bg-orange-400/20' };
+    case 5: return { label: 'Strong Sell', color: 'text-bearish bg-bearish/20' };
+    default: return { label: 'N/A', color: 'text-muted-foreground bg-muted' };
+  }
+};
+
+const getVGMColor = (grade: string): string => {
+  switch (grade) {
+    case 'A': return 'text-bullish bg-bullish/20';
+    case 'B': return 'text-green-400 bg-green-400/20';
+    case 'C': return 'text-warning bg-warning/20';
+    case 'D': return 'text-orange-400 bg-orange-400/20';
+    case 'F': return 'text-bearish bg-bearish/20';
+    default: return 'text-muted-foreground bg-muted';
+  }
+};
 
 // Generate next 8 Fridays for expiration selection
 const getUpcomingExpirations = () => {
@@ -644,6 +741,53 @@ export default function GammaExposure() {
             <DataCard title="Put Wall (Support)" value={formatPrice(data.putWall)} icon={<ArrowDown className="h-4 w-4 text-bullish" />} />
             <DataCard title="Call Wall (Resistance)" value={formatPrice(data.callWall)} icon={<ArrowUp className="h-4 w-4 text-bearish" />} />
           </div>
+
+          {/* Zacks Ranking Card (Sample Data) */}
+          {zacksRankings[data.ticker] && (
+            <div className="p-4 rounded-lg border border-border bg-card">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <Star className="h-5 w-5 text-yellow-500" />
+                  <h3 className="font-semibold">Zacks Style Rankings</h3>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-muted-foreground">Overall:</span>
+                  <span className={`px-3 py-1 rounded-md font-bold text-sm ${getZacksLabel(zacksRankings[data.ticker].overall).color}`}>
+                    {zacksRankings[data.ticker].overall} - {getZacksLabel(zacksRankings[data.ticker].overall).label}
+                  </span>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="p-3 rounded-lg bg-surface text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Value</p>
+                  <span className={`px-2 py-1 rounded font-bold text-sm ${getZacksLabel(zacksRankings[data.ticker].value).color}`}>
+                    {zacksRankings[data.ticker].value}
+                  </span>
+                </div>
+                <div className="p-3 rounded-lg bg-surface text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Growth</p>
+                  <span className={`px-2 py-1 rounded font-bold text-sm ${getZacksLabel(zacksRankings[data.ticker].growth).color}`}>
+                    {zacksRankings[data.ticker].growth}
+                  </span>
+                </div>
+                <div className="p-3 rounded-lg bg-surface text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Momentum</p>
+                  <span className={`px-2 py-1 rounded font-bold text-sm ${getZacksLabel(zacksRankings[data.ticker].momentum).color}`}>
+                    {zacksRankings[data.ticker].momentum}
+                  </span>
+                </div>
+                <div className="p-3 rounded-lg bg-surface text-center">
+                  <p className="text-xs text-muted-foreground mb-1">VGM</p>
+                  <span className={`px-2 py-1 rounded font-bold text-sm ${getVGMColor(zacksRankings[data.ticker].vgm)}`}>
+                    {zacksRankings[data.ticker].vgm}
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Institutional Price Targets */}
+          <AIForecast ticker={data.ticker} />
 
           {/* Gamma Inflection Info */}
           <div className="p-4 rounded-lg border border-purple-500/30 bg-purple-500/10">

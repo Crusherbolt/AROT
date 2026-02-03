@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useCOTData, COTRecord } from '@/hooks/useCOTData';
+import { AIForecast } from '@/components/dashboard/AIForecast';
 import { CustomBadge } from '@/components/ui/custom-badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { RefreshCw, Search, ArrowUpDown, Download, Filter, TrendingUp, Users, Info, ChevronRight, ArrowUp, ArrowDown, Calendar } from 'lucide-react';
+import { RefreshCw, Search, ArrowUpDown, Download, Filter, TrendingUp, Users, Info, ChevronRight, ArrowUp, ArrowDown, Calendar, Activity } from 'lucide-react';
 import { formatDistanceToNow, format } from 'date-fns';
 import { useSearchParams } from 'react-router-dom';
 import {
@@ -27,6 +28,26 @@ import {
   Area,
   ReferenceLine,
 } from 'recharts';
+
+// Commodity to ETF mapping with sample gamma data
+const commodityETFMap: Record<string, { etf: string; name: string; gamma: number; putWall: number; callWall: number; spotPrice: number }> = {
+  'GOLD': { etf: 'GLD', name: 'SPDR Gold Shares', gamma: 12500000, putWall: 218, callWall: 235, spotPrice: 225.50 },
+  'SILVER': { etf: 'SLV', name: 'iShares Silver Trust', gamma: 8200000, putWall: 26.50, callWall: 31.00, spotPrice: 28.75 },
+  'CRUDE OIL': { etf: 'USO', name: 'United States Oil Fund', gamma: 5600000, putWall: 68.00, callWall: 78.00, spotPrice: 72.45 },
+  'NATURAL GAS': { etf: 'UNG', name: 'United States Natural Gas Fund', gamma: 3400000, putWall: 5.50, callWall: 8.00, spotPrice: 6.80 },
+  'COPPER': { etf: 'CPER', name: 'United States Copper Index Fund', gamma: 2100000, putWall: 24.00, callWall: 28.00, spotPrice: 25.80 },
+  'CORN': { etf: 'CORN', name: 'Teucrium Corn Fund', gamma: 1800000, putWall: 18.50, callWall: 22.00, spotPrice: 20.25 },
+  'WHEAT': { etf: 'WEAT', name: 'Teucrium Wheat Fund', gamma: 1500000, putWall: 5.00, callWall: 6.50, spotPrice: 5.75 },
+  'SOYBEANS': { etf: 'SOYB', name: 'Teucrium Soybean Fund', gamma: 1200000, putWall: 24.00, callWall: 27.00, spotPrice: 25.50 },
+  'S&P 500': { etf: 'SPY', name: 'SPDR S&P 500 ETF', gamma: 85000000, putWall: 580, callWall: 620, spotPrice: 598.00 },
+  'E-MINI S&P 500': { etf: 'SPY', name: 'SPDR S&P 500 ETF', gamma: 85000000, putWall: 580, callWall: 620, spotPrice: 598.00 },
+  'NASDAQ 100': { etf: 'QQQ', name: 'Invesco QQQ Trust', gamma: 42000000, putWall: 495, callWall: 535, spotPrice: 512.00 },
+  'E-MINI NASDAQ': { etf: 'QQQ', name: 'Invesco QQQ Trust', gamma: 42000000, putWall: 495, callWall: 535, spotPrice: 512.00 },
+  'RUSSELL 2000': { etf: 'IWM', name: 'iShares Russell 2000 ETF', gamma: 18000000, putWall: 195, callWall: 215, spotPrice: 205.00 },
+  'DOW JONES': { etf: 'DIA', name: 'SPDR Dow Jones Industrial', gamma: 15000000, putWall: 435, callWall: 465, spotPrice: 448.00 },
+  '10Y TREASURY': { etf: 'IEF', name: 'iShares 7-10 Year Treasury Bond ETF', gamma: 8500000, putWall: 92.50, callWall: 98.00, spotPrice: 95.50 },
+  'EUR/USD': { etf: 'FXE', name: 'Invesco CurrencyShares Euro Trust', gamma: 4200000, putWall: 98.00, callWall: 104.00, spotPrice: 101.20 },
+};
 
 type SortField = 'commodity' | 'commercialNet' | 'nonCommercialNet' | 'openInterest' | 'changeOI';
 type SortOrder = 'asc' | 'desc';
@@ -376,6 +397,61 @@ export default function COTReports() {
               </AreaChart>
             </ResponsiveContainer>
           </div>
+
+          {/* Related ETF Gamma Section */}
+          {selectedHistory[0]?.commodity && commodityETFMap[selectedHistory[0].commodity.toUpperCase()] && (
+            <div className="p-4 rounded-lg border border-primary/30 bg-primary/5">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <Activity className="h-5 w-5 text-primary" />
+                  <h3 className="font-semibold">Related ETF Gamma Exposure</h3>
+                </div>
+                <CustomBadge variant="bullish" className="font-mono">
+                  {commodityETFMap[selectedHistory[0].commodity.toUpperCase()].etf}
+                </CustomBadge>
+              </div>
+              
+              <p className="text-sm text-muted-foreground mb-4">
+                {commodityETFMap[selectedHistory[0].commodity.toUpperCase()].name}
+              </p>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="p-3 rounded-lg bg-surface">
+                  <p className="text-xs text-muted-foreground mb-1">Net Gamma</p>
+                  <p className="font-mono font-bold text-primary">
+                    {(commodityETFMap[selectedHistory[0].commodity.toUpperCase()].gamma / 1000000).toFixed(1)}M
+                  </p>
+                </div>
+                <div className="p-3 rounded-lg bg-surface">
+                  <p className="text-xs text-muted-foreground mb-1">Spot Price</p>
+                  <p className="font-mono font-bold">
+                    ${commodityETFMap[selectedHistory[0].commodity.toUpperCase()].spotPrice.toFixed(2)}
+                  </p>
+                </div>
+                <div className="p-3 rounded-lg bg-surface">
+                  <p className="text-xs text-muted-foreground mb-1">Put Wall (Support)</p>
+                  <p className="font-mono font-bold text-bullish">
+                    ${commodityETFMap[selectedHistory[0].commodity.toUpperCase()].putWall.toFixed(2)}
+                  </p>
+                </div>
+                <div className="p-3 rounded-lg bg-surface">
+                  <p className="text-xs text-muted-foreground mb-1">Call Wall (Resistance)</p>
+                  <p className="font-mono font-bold text-bearish">
+                    ${commodityETFMap[selectedHistory[0].commodity.toUpperCase()].callWall.toFixed(2)}
+                  </p>
+                </div>
+              </div>
+              
+              <p className="text-xs text-muted-foreground mt-3">
+                💡 Use gamma levels alongside COT data for confluent trade signals. Net positive gamma above spot = bullish support.
+              </p>
+            </div>
+          )}
+
+          {/* AI Forecast Section */}
+          {selectedHistory[0]?.commodity && (
+             <AIForecast commodity={selectedHistory[0].commodity} />
+          )}
 
           {/* Historical Data Table */}
           <div className="overflow-x-auto">

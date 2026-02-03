@@ -66,23 +66,23 @@ serve(async (req) => {
     const url = new URL(req.url);
     const commodity = url.searchParams.get('commodity');
     const weeks = parseInt(url.searchParams.get('weeks') || '25');
-    
+
     console.log(`Fetching COT data - commodity: ${commodity}, weeks: ${weeks}`);
 
     let cotData: COTRecord[] = [];
     let historicalData: Record<string, COTRecord[]> = {};
-    
+
     // Fetch from CFTC Legacy Futures API
     try {
       const response = await fetch(
         `${CFTC_LEGACY_API}?$limit=500&$order=report_date_as_yyyy_mm_dd DESC`,
         { headers: { 'Accept': 'application/json' } }
       );
-      
+
       if (response.ok) {
         const data = await response.json();
         console.log(`CFTC API returned ${data.length} records`);
-        
+
         // Process and map the data
         const processedData = data
           .filter((item: any) => CONTRACT_MAPPING[item.cftc_contract_market_code])
@@ -96,7 +96,7 @@ serve(async (req) => {
             const nonRepShort = parseInt(item.nonrept_positions_short_all) || 0;
             const oi = parseInt(item.open_interest_all) || 1;
             const spread = parseInt(item.noncomm_positions_spread_all) || 0;
-            
+
             return {
               date: item.report_date_as_yyyy_mm_dd,
               commodity: mapping.name,
@@ -160,79 +160,17 @@ serve(async (req) => {
       console.log('CFTC API error:', e);
     }
 
-    // If no data from API, generate realistic sample data with history
+    // If no data from API, return error instead of sample data
     if (cotData.length === 0) {
-      console.log('Generating sample data...');
-      const commodities = Object.entries(CONTRACT_MAPPING);
-      
-      commodities.forEach(([cftcCode, { name, category, code }]) => {
-        const records: COTRecord[] = [];
-        let baseOI = 100000 + Math.floor(Math.random() * 400000);
-        let commLong = Math.floor(baseOI * (0.25 + Math.random() * 0.2));
-        let commShort = Math.floor(baseOI * (0.2 + Math.random() * 0.2));
-        
-        for (let w = 0; w < weeks; w++) {
-          const date = new Date();
-          date.setDate(date.getDate() - (w * 7));
-          const dateStr = date.toISOString().split('T')[0];
-          
-          // Random walk for positions
-          const deltaLong = Math.floor((Math.random() - 0.48) * commLong * 0.08);
-          const deltaShort = Math.floor((Math.random() - 0.52) * commShort * 0.08);
-          const deltaOI = Math.floor((Math.random() - 0.5) * baseOI * 0.03);
-          
-          commLong = Math.max(1000, commLong + deltaLong);
-          commShort = Math.max(1000, commShort + deltaShort);
-          baseOI = Math.max(50000, baseOI + deltaOI);
-          
-          const nonCommLong = Math.floor(baseOI * (0.2 + Math.random() * 0.15));
-          const nonCommShort = Math.floor(baseOI * (0.15 + Math.random() * 0.15));
-          const nonRepLong = Math.floor(baseOI * (0.1 + Math.random() * 0.1));
-          const nonRepShort = Math.floor(baseOI * (0.08 + Math.random() * 0.1));
-          
-          records.push({
-            date: dateStr,
-            commodity: name,
-            code: code,
-            category: category,
-            commercialLong: commLong,
-            commercialShort: commShort,
-            commercialNet: commLong - commShort,
-            nonCommercialLong: nonCommLong,
-            nonCommercialShort: nonCommShort,
-            nonCommercialNet: nonCommLong - nonCommShort,
-            nonReportableLong: nonRepLong,
-            nonReportableShort: nonRepShort,
-            nonReportableNet: nonRepLong - nonRepShort,
-            openInterest: baseOI,
-            changeLong: w === 0 ? 0 : deltaLong,
-            changeShort: w === 0 ? 0 : deltaShort,
-            changeNet: 0,
-            changeOI: deltaOI,
-            percentOILong: Math.round((commLong / baseOI) * 1000) / 10,
-            percentOIShort: Math.round((commShort / baseOI) * 1000) / 10,
-            spreadPositions: Math.floor(nonCommLong * 0.3),
-          });
-        }
-        
-        // Calculate changes
-        for (let i = 0; i < records.length - 1; i++) {
-          records[i].changeLong = records[i].commercialLong - records[i + 1].commercialLong;
-          records[i].changeShort = records[i].commercialShort - records[i + 1].commercialShort;
-          records[i].changeNet = records[i].commercialNet - records[i + 1].commercialNet;
-        }
-        
-        historicalData[code] = records;
-        cotData.push(records[0]);
-      });
+      throw new Error('No data returned from CFTC API');
     }
 
     // If a specific commodity is requested, return its historical data
     if (commodity) {
       const commodityKey = commodity.toUpperCase();
       const history = historicalData[commodityKey] || [];
-      
-      return new Response(JSON.stringify({ 
+
+      return new Response(JSON.stringify({
         data: history,
         summary: cotData.find(d => d.code === commodityKey),
         success: true,
@@ -242,7 +180,7 @@ serve(async (req) => {
       });
     }
 
-    return new Response(JSON.stringify({ 
+    return new Response(JSON.stringify({
       data: cotData,
       historical: historicalData,
       success: true,
