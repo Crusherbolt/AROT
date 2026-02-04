@@ -39,7 +39,8 @@ export function AIForecast({ commodity, ticker }: { commodity?: string; ticker?:
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${anonKey || ''}`
+          'Authorization': `Bearer ${anonKey || ''}`,
+          'apikey': anonKey || ''
         },
         body: JSON.stringify({ commodity: subject, ticker: subject, type })
       });

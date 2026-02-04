@@ -7,59 +7,55 @@ const corsHeaders = {
     'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-// User-provided Ground Truth for core assets
+// User-provided Ground Truth for core assets (Updated 2026 Forecasts)
 const GROUND_TRUTH: Record<string, any> = {
     'GOLD': {
-        summary: "Gold enters a secular bull market as central banks diversify and inflation hedges remain critical. Institutional consensus points to massive upside through 2026.",
+        summary: "Goldman Sachs has raised its end‑2026 gold price forecast to $5,400 per ounce, citing strong demand from private investors and emerging‑market central banks. This bullish outlook reflects gold’s role as a hedge against geopolitical and currency risks, alongside Fed rate cuts.",
         targets: [
-            { institution: 'Goldman Sachs', target: '$5,400', view: 'Bullish', date: 'Dec 2025' },
-            { institution: 'UBS', target: '$6,000', view: 'Bullish', date: 'Jan 2026' },
-            { institution: 'J.P. Morgan', target: '$5,250', view: 'Bullish', date: 'Q4 2025' }
+            { institution: 'UBS', target: '$6,200', view: 'Bullish', date: 'End-2026' },
+            { institution: 'Goldman Sachs', target: '$5,400', view: 'Bullish', date: 'Dec 2026' },
+            { institution: 'J.P. Morgan', target: '$4,900', view: 'Neutral', date: 'Q4 2026' }
         ],
-        risks: ['Real yield spikes', 'Stronger USD persistence']
+        risks: ['Stronger USD persistence', 'Profit-taking after 2025 surge', 'Geopolitical easing']
     },
     'SILVER': {
-        summary: "Silver is expected to outperform gold due to industrial demand (solar/EV) and extreme supply deficits. 2025 is seen as the breakout year.",
+        summary: "Goldman Sachs sees silver at $65/oz by end-2026, benefiting from industrial demand and high correlation with gold. UBS is even more aggressive, targeting $70+ on structural supply deficits.",
         targets: [
-            { institution: 'J.P. Morgan', target: '$65', view: 'Bullish', date: 'Dec 2025' },
-            { institution: 'Morgan Stanley', target: '$72', view: 'Bullish', date: 'Q1 2026' },
-            { institution: 'Citi Bank', target: '$60+', view: 'Bullish', date: 'Mid 2025' }
+            { institution: 'UBS', target: '$70+', view: 'Bullish', date: 'End-2026' },
+            { institution: 'Goldman Sachs', target: '$65', view: 'Bullish', date: 'Dec 2026' },
+            { institution: 'J.P. Morgan', target: '$58', view: 'Neutral', date: 'Mid 2026' }
         ],
-        risks: ['Industrial slowdown', 'Mining supply increases']
+        risks: ['Industrial slowdown', 'Rupee depreciation impact (India)']
     },
     'SPX': {
-        summary: "S&P 500 momentum continues driven by earnings growth and interest rate normalization. Tech remains the primary engine.",
+        summary: "Goldman Sachs has revised its S&P 500 forecast to 7,600 by end‑2026, driven by AI productivity, tariff relief, and strong GDP growth. UBS is most aggressive, with targets reaching up to 8,100.",
         targets: [
-            { institution: 'Goldman Sachs', target: '7,400', view: 'Bullish', date: 'Dec 2025' },
-            { institution: 'UBS', target: '7,600', view: 'Bullish', date: 'Jan 2026' },
-            { institution: 'Oppenheimer', target: '7,500', view: 'Bullish', date: 'EOY 2025' }
+            { institution: 'UBS', target: '8,100', view: 'Bullish', date: 'End-2026' },
+            { institution: 'Goldman Sachs', target: '7,600', view: 'Bullish', date: 'Dec 2026' },
+            { institution: 'J.P. Morgan', target: '7,000', view: 'Neutral', date: 'Mid 2026' }
         ],
-        risks: ['Inflation rebound', 'Corporate tax policy changes']
+        risks: ['Valuation stretch', 'Earnings growth disappointment', 'Fiscal risks']
     },
     'OIL': {
-        summary: "WTI Crude faces headwinds as production surpluses balance out geopolitical risk premiums. Bearish bias dominates long-term outlook.",
+        summary: "Goldman Sachs is bearish on energy, forecasting WTI at $53/barrel average in 2026 due to surplus inventories (+2M bpd) and weak demand. Brent is expected to average $58.",
         targets: [
-            { institution: 'Citi', target: '$65', view: 'Bearish', date: 'Dec 2025' },
-            { institution: 'J.P. Morgan', target: '$70', view: 'Neutral', date: 'Mid 2025' },
-            { institution: 'Goldman Sachs', target: '$75', view: 'Neutral', date: 'Q4 2025' }
+            { institution: 'J.P. Morgan', target: '$65', view: 'Neutral', date: 'Dec 2026' },
+            { institution: 'UBS', target: '$60', view: 'Neutral', date: 'Mid 2026' },
+            { institution: 'Goldman Sachs', target: '$53', view: 'Bearish', date: 'Avg 2026' }
         ],
-        risks: ['Supply disruptions', 'OPEC+ production cuts']
+        risks: ['OPEC+ aggressive cuts', 'Geopolitical supply shocks']
     },
-    'ETH': {
-        summary: "Ethereum remains the foundational layer for institutional DeFi. Scaling solutions drive mass adoption through 2026.",
-        targets: [
-            { institution: 'Standard Chartered', target: '$12k', view: 'Bullish', date: 'Dec 2025' },
-            { institution: 'Franklin Templeton', target: '$10k', view: 'Bullish', date: 'Jan 2026' }
-        ],
-        risks: ['Regulation clarity', 'Competition from L1s']
+    'GLD': { // Map ETF search to Commodity Ground Truth
+        link: 'GOLD'
     },
-    'SOL': {
-        summary: "Solana's high-performance throughput wins market share from traditional financial rails. Network stability is the key focus.",
-        targets: [
-            { institution: 'VanEck', target: '$850', view: 'Bullish', date: 'Dec 2025' },
-            { institution: 'Bernstein', target: '$600', view: 'Bullish', date: 'EOY 2025' }
-        ],
-        risks: ['Network outages', 'Security centralization']
+    'SLV': {
+        link: 'SILVER'
+    },
+    'SPY': {
+        link: 'SPX'
+    },
+    'USO': {
+        link: 'OIL'
     }
 };
 
@@ -70,14 +66,19 @@ serve(async (req) => {
 
     try {
         const { ticker, commodity, type } = await req.json();
-        const subject = (commodity || ticker || '').toUpperCase();
+        let subject = (commodity || ticker || '').toUpperCase();
 
-        // 1. Initialize Supabase Client
+        // 1. Resolve Link if it exists
+        if (GROUND_TRUTH[subject]?.link) {
+            subject = GROUND_TRUTH[subject].link;
+        }
+
+        // 2. Initialize Supabase Client
         const supabaseUrl = Deno.env.get('SUPABASE_URL') ?? "";
         const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? "";
         const supabase = createClient(supabaseUrl, supabaseKey);
 
-        // 2. Check Ground Truth (Priority)
+        // 3. Check Ground Truth (Priority)
         if (GROUND_TRUTH[subject]) {
             console.log(`Returning Ground Truth for ${subject}`);
             return new Response(JSON.stringify({ ...GROUND_TRUTH[subject], source: 'ground_truth' }), {
@@ -85,7 +86,7 @@ serve(async (req) => {
             });
         }
 
-        // 3. Check Database for Cached Data (within 24 hours)
+        // 4. Check Database for Cached Data (within 24 hours)
         const { data: cached } = await supabase
             .from('institutional_forecasts')
             .select('*')
@@ -103,7 +104,7 @@ serve(async (req) => {
             }
         }
 
-        // 4. Fallback to Gemini with Search Grounding
+        // 5. Fallback to Gemini with Search Grounding
         const apiKey = Deno.env.get('GEMINI_API_KEY');
         const prompt = `
           Act as a senior market analyst.
@@ -127,7 +128,7 @@ serve(async (req) => {
         const result = JSON.parse(text.replace(/```json/g, '').replace(/```/g, '').trim());
         const finalResult = { ...result, source: 'ai_search' };
 
-        // 5. Persist to Database
+        // 6. Persist to Database
         try {
             await supabase.from('institutional_forecasts').delete().eq('asset', subject);
             await supabase.from('institutional_forecasts').insert({
