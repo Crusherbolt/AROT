@@ -32,13 +32,16 @@ export function AIForecast({ commodity, ticker }: { commodity?: string; ticker?:
     setError(null);
     try {
       // 1. Try Edge Function
-      const response = await fetch('http://localhost:54321/functions/v1/fetch-forecast', {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+      
+      const response = await fetch(`${supabaseUrl}/functions/v1/fetch-forecast`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY || ''}`
+          'Authorization': `Bearer ${anonKey || ''}`
         },
-        body: JSON.stringify({ commodity: subject, type })
+        body: JSON.stringify({ commodity: subject, ticker: subject, type })
       });
 
       if (response.ok) {
