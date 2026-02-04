@@ -138,7 +138,7 @@ export function AIForecast({ commodity, ticker }: { commodity?: string; ticker?:
     <div className="flex items-center gap-2 mb-4">
       <Sparkles className="w-5 h-5 text-purple-500" />
       <h3 className="font-semibold text-lg">Institutional Price Targets</h3>
-      <CustomBadge variant="secondary" className="text-xs">
+      <CustomBadge variant="muted" className="text-xs">
         AI Analysis • Live Web Search
       </CustomBadge>
     </div>
@@ -202,7 +202,7 @@ export function AIForecast({ commodity, ticker }: { commodity?: string; ticker?:
                   <span className="font-medium text-sm">{t.institution}</span>
                 </div>
                 <CustomBadge
-                  variant={t.view === 'Bullish' ? 'default' : t.view === 'Bearish' ? 'destructive' : 'secondary'}
+                  variant={t.view === 'Bullish' ? 'bullish' : t.view === 'Bearish' ? 'bearish' : 'muted'}
                   className="text-xs"
                 >
                   {t.view.toUpperCase()}

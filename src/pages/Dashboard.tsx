@@ -33,7 +33,7 @@ export default function Dashboard() {
       {/* Hero Section */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Market Intelligence Dashboard</h1>
           <p className="text-muted-foreground mt-1">
             Real-time market analytics and insights
           </p>
