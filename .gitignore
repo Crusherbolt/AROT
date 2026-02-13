@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 import_log.txt
 import_log_final.txt
+build_error.txt
 
 node_modules
 dist

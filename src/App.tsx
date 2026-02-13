@@ -9,7 +9,6 @@ import Index from "./pages/Index";
 import COTReports from "./pages/COTReports";
 import NewsFeed from "./pages/NewsFeed";
 import GammaExposure from "./pages/GammaExposure";
-import Crudeeeeee from "./pages/Crudeeeeee";
 import CrudeOil from "./pages/CrudeOil";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -34,7 +33,6 @@ const App = () => (
               <Route path="/cot-reports" element={<COTReports />} />
               <Route path="/news" element={<NewsFeed />} />
               <Route path="/gamma" element={<GammaExposure />} />
-              <Route path="/cru" element={<Crudeeeeee />} />
               <Route path="/crude-oil" element={<CrudeOil />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
