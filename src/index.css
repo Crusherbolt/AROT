@@ -164,6 +164,17 @@
     background-color: hsl(var(--surface));
   }
 
+  .data-grid {
+    display: grid;
+    gap: 1px;
+    background-color: hsl(var(--border));
+  }
+
+  .data-grid > * {
+    background-color: hsl(var(--card));
+  }
+
+  /* Animations */
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
@@ -183,13 +194,33 @@
     }
   }
 
-  .data-grid {
-    display: grid;
-    gap: 1px;
-    background-color: hsl(var(--border));
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
   }
 
-  .data-grid > * {
-    background-color: hsl(var(--card));
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 10px currentColor;
+    }
+    50% {
+      opacity: .5;
+      box-shadow: 0 0 20px currentColor;
+    }
   }
 }

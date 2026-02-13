@@ -18,53 +18,52 @@ function seededRandom(seed: string): number {
   return Math.abs((Math.sin(hash) * 43758.5453) % 1);
 }
 
-// Updated Feb 2026 fallback prices
+// Updated Feb 2026 fallback prices (Expanded Coverage)
 const FALLBACK_PRICES: Record<string, number> = {
-  'SPY': 604.50,
-  'QQQ': 535.20,
-  'AAPL': 232.80,
-  'TSLA': 340.00,
-  'NVDA': 131.50,
-  'AMZN': 228.30,
-  'MSFT': 412.60,
-  'META': 705.40,
-  'GOOGL': 188.20,
-  'GOOG': 189.50,
-  'AMD': 118.75,
-  'IWM': 228.50,
-  'DIA': 442.00,
-  'GLD': 268.00,
-  'SLV': 29.50,
-  'TLT': 86.50,
-  'XLE': 88.20,
-  'XLF': 48.50,
-  'AVGO': 235.80,
-  'CRM': 345.20,
-  'COIN': 285.00,
-  'MSTR': 330.00,
-  'NFLX': 980.00,
-  'JPM': 262.50,
-  'BAC': 47.20,
-  'WFC': 75.30,
-  'GS': 620.00,
-  'V': 342.00,
-  'MA': 545.00,
-  'WMT': 98.50,
-  'COST': 1005.00,
-  'HD': 405.00,
-  'NKE': 72.50,
-  'XOM': 108.50,
-  'CVX': 155.00,
-  'LLY': 845.00,
-  'JNJ': 158.00,
-  'PFE': 26.50,
-  'BA': 178.50,
-  'CAT': 385.00,
-  'DIS': 112.00,
-  'INTC': 22.50,
-  'PLTR': 115.00,
-  'SMCI': 42.00,
-  'MU': 98.50,
+  // Indices & ETFs
+  'SPY': 604.50, 'QQQ': 535.20, 'IWM': 228.50, 'DIA': 442.00,
+  'GLD': 268.00, 'SLV': 29.50, 'TLT': 86.50, 'HYG': 78.20,
+  'XLE': 88.20, 'XLF': 48.50, 'XLK': 245.00, 'XLV': 155.00,
+  'SMH': 265.00, 'ARKK': 52.50, 'EEM': 44.20, 'EWZ': 32.50,
+
+  // Mag 7 + Big Tech
+  'AAPL': 232.80, 'MSFT': 412.60, 'NVDA': 131.50, 'GOOGL': 188.20, 'GOOG': 189.50,
+  'AMZN': 228.30, 'META': 705.40, 'TSLA': 340.00, 'NFLX': 980.00,
+
+  // Semis
+  'AMD': 118.75, 'AVGO': 235.80, 'MU': 98.50, 'INTC': 22.50,
+  'QCOM': 165.20, 'TXN': 198.50, 'AMAT': 185.00, 'LRCX': 75.00,
+  'SMCI': 42.00, 'TSM': 185.00, 'ARM': 145.00,
+
+  // Software / Cloud
+  'CRM': 345.20, 'ADBE': 525.00, 'ORCL': 172.50, 'IBM': 225.00,
+  'NOW': 950.00, 'PANW': 365.00, 'PLTR': 115.00, 'SNOW': 145.00,
+  'CRWD': 310.00, 'MSTR': 330.00, 'COIN': 285.00, 'UBER': 82.50,
+  'ABNB': 135.00, 'PYPL': 78.00, 'SQ': 85.00, 'SHOP': 110.00,
+  'JD': 44.50, 'BABA': 115.00, 'PDD': 145.00, 'BIDU': 110.00,
+  'TCEHY': 52.00, 'NTES': 105.00, 'BEKE': 22.00, 'LI': 32.00,
+
+  // Finance
+  'JPM': 262.50, 'BAC': 47.20, 'WFC': 75.30, 'C': 68.50,
+  'GS': 620.00, 'MS': 135.00, 'BLK': 980.00, 'V': 342.00,
+  'MA': 545.00, 'AXP': 285.00,
+
+  // Consumer / Retail
+  'WMT': 98.50, 'COST': 1005.00, 'HD': 405.00, 'TGT': 145.00,
+  'NKE': 72.50, 'SBUX': 98.00, 'MCD': 310.00, 'KO': 68.50,
+  'PEP': 165.00, 'PG': 175.00, 'CL': 98.00,
+
+  // Energy / Industrial
+  'XOM': 108.50, 'CVX': 155.00, 'COP': 105.00, 'SLB': 42.00,
+  'BA': 178.50, 'CAT': 385.00, 'DE': 395.00, 'GE': 185.00,
+  'HON': 205.00, 'MMM': 115.00, 'UNP': 245.00, 'UPS': 135.00,
+
+  // Pharma / Bio
+  'LLY': 845.00, 'JNJ': 158.00, 'PFE': 26.50, 'MRK': 115.00,
+  'ABBV': 185.00, 'AMGN': 285.00, 'GILD': 75.00, 'BIIB': 185.00,
+
+  // Media / Telco
+  'DIS': 112.00, 'CMCSA': 42.00, 'T': 18.50, 'VZ': 42.50,
 };
 
 // Try to get live price from Yahoo Finance (best effort)
@@ -115,20 +114,38 @@ function generateDeterministicGamma(ticker: string, spotPrice: number, expiratio
   const strikes: any[] = [];
   const strikeStep = Math.round(spotPrice * 0.01 * 100) / 100; // 1% step
 
-  for (let i = -10; i <= 10; i++) {
+  for (let i = -15; i <= 15; i++) {
     const strike = Math.round((spotPrice + i * strikeStep) * 100) / 100;
     const distanceFromSpot = Math.abs(strike - spotPrice) / spotPrice;
-    const gammaMultiplier = Math.exp(-distanceFromSpot * 8);
+
+    // Base Gamma Distribution (Bell Curve)
+    const gammaMultiplier = Math.exp(-distanceFromSpot * 10);
+
+    // Apply Volatility Skew Logic:
+    // Puts have higher OI below spot (OTM Puts)
+    // Calls have higher OI above spot (OTM Calls)
+    let callSkew = 1;
+    let putSkew = 1;
+
+    if (strike > spotPrice) {
+      callSkew = 1.5; // OTM Calls often have higher OI (Call Wall)
+      putSkew = 0.5;
+    } else if (strike < spotPrice) {
+      putSkew = 1.8; // OTM Puts (Checking/Hedging) usually highest OI
+      callSkew = 0.5;
+    }
 
     // Use deterministic seeded random instead of Math.random()
     const seedBase = `${ticker}-${strike}-${expiration}`;
     const r1 = seededRandom(seedBase + '-callOI');
     const r2 = seededRandom(seedBase + '-putOI');
 
-    const callOI = Math.floor(r1 * 50000 * gammaMultiplier) + 1000;
-    const putOI = Math.floor(r2 * 50000 * gammaMultiplier) + 1000;
-    const callGamma = Math.round(callOI * 100 * gammaMultiplier * 0.01);
-    const putGamma = Math.round(-putOI * 100 * gammaMultiplier * 0.01);
+    const callOI = Math.floor(r1 * 40000 * gammaMultiplier * callSkew) + 500;
+    const putOI = Math.floor(r2 * 45000 * gammaMultiplier * putSkew) + 500;
+
+    // GEX Calculation: Call Gamma is Positive, Put Gamma is Negative
+    const callGamma = Math.round(callOI * 100 * gammaMultiplier * 0.015);
+    const putGamma = Math.round(-putOI * 100 * gammaMultiplier * 0.015);
 
     strikes.push({
       strike,
@@ -143,21 +160,26 @@ function generateDeterministicGamma(ticker: string, spotPrice: number, expiratio
   // Find walls deterministically (highest OI)
   const maxPutOI = Math.max(...strikes.map((s: any) => s.putOI));
   const maxCallOI = Math.max(...strikes.map((s: any) => s.callOI));
-  const putWall = strikes.find((s: any) => s.putOI === maxPutOI)?.strike || spotPrice * 0.95;
-  const callWall = strikes.find((s: any) => s.callOI === maxCallOI)?.strike || spotPrice * 1.05;
+
+  // Ensure walls are logically placed if stats fail (fallback logic)
+  let putWall = strikes.find((s: any) => s.putOI === maxPutOI)?.strike;
+  let callWall = strikes.find((s: any) => s.callOI === maxCallOI)?.strike;
+
+  if (!putWall || putWall > spotPrice) putWall = Math.round(spotPrice * 0.95 * 100) / 100;
+  if (!callWall || callWall < spotPrice) callWall = Math.round(spotPrice * 1.05 * 100) / 100;
 
   // Calculate gamma flip deterministically
   const flipSeed = seededRandom(`${ticker}-flip-${expiration}`);
-  const gammaFlip = Math.round((spotPrice * (1 + (flipSeed - 0.5) * 0.02)) * 100) / 100;
+  const gammaFlip = Math.round((spotPrice * (0.98 + (flipSeed * 0.04))) * 100) / 100; // Within +/- 2% of spot
 
   const totalGamma = strikes.reduce((sum: number, s: any) => sum + Math.abs(s.netGamma), 0);
   const netGamma = strikes.reduce((sum: number, s: any) => sum + s.netGamma, 0);
 
   return {
-    strikes,
+    strikes: strikes.sort((a, b) => a.strike - b.strike),
     gammaFlip,
-    putWall: Math.round(putWall * 100) / 100,
-    callWall: Math.round(callWall * 100) / 100,
+    putWall,
+    callWall,
     totalGamma: Math.round(totalGamma),
     netGamma: Math.round(netGamma),
   };

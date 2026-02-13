@@ -8,6 +8,27 @@ import { formatDistanceToNow } from 'date-fns';
 import { FedWatch } from '@/components/dashboard/FedWatch';
 import { AAIIWidget } from '@/components/dashboard/AAIIWidget';
 import { MarketOverviewWidget } from '@/components/dashboard/MarketOverviewWidget';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 100 }
+  }
+};
 
 export default function Dashboard() {
   const { data: cotData, lastUpdate } = useCOTData();
@@ -29,9 +50,14 @@ export default function Dashboard() {
   const recentNews = news.slice(0, 5);
 
   return (
-    <div className="space-y-6 animate-fade-up">
+    <motion.div 
+      className="space-y-6"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       {/* Hero Section */}
-      <div className="flex items-center justify-between">
+      <motion.div className="flex items-center justify-between" variants={itemVariants}>
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Market Intelligence Dashboard</h1>
           <p className="text-muted-foreground mt-1">
@@ -44,10 +70,10 @@ export default function Dashboard() {
             <span>Updated {formatDistanceToNow(lastUpdate, { addSuffix: true })}</span>
           </div>
         )}
-      </div>
+      </motion.div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" variants={itemVariants}>
         <DataCard
           title="COT Signals"
           value={cotData.length}
@@ -72,12 +98,12 @@ export default function Dashboard() {
           icon={<Users className="h-4 w-4" />}
           changeLabel="NYSE opens in 2h 15m"
         />
-      </div>
+      </motion.div>
 
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* COT Overview */}
-        <div className="lg:col-span-2 rounded-lg border border-border bg-card p-4">
+        <motion.div className="lg:col-span-2 rounded-lg border border-border bg-card p-4" variants={itemVariants}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <BarChart3 className="h-5 w-5 text-primary" />
@@ -94,7 +120,6 @@ export default function Dashboard() {
                 to={`/cot-reports?code=${item.code || item.name}`} 
                 key={item.name}
                 className="flex items-center justify-between p-3 rounded-md bg-surface hover:bg-surface-hover transition-colors cursor-pointer group"
-                style={{ animationDelay: `${idx * 50}ms` }}
               >
                 <div className="flex items-center gap-3">
                   <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-mono flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -118,10 +143,10 @@ export default function Dashboard() {
               </Link>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Live News Feed */}
-        <div className="rounded-lg border border-border bg-card p-4">
+        <motion.div className="rounded-lg border border-border bg-card p-4Space" variants={itemVariants}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Zap className="h-5 w-5 text-warning" />
@@ -133,11 +158,10 @@ export default function Dashboard() {
           </div>
           
           <div className="space-y-3">
-            {recentNews.map((item, idx) => (
+            {recentNews.map((item) => (
               <div 
                 key={item.id}
-                className="p-3 rounded-md bg-surface hover:bg-surface-hover transition-colors animate-fade-up"
-                style={{ animationDelay: `${idx * 100}ms` }}
+                className="p-3 rounded-md bg-surface hover:bg-surface-hover transition-colors"
               >
                 <div className="flex items-start gap-2 mb-1">
                   <CustomBadge 
@@ -159,26 +183,26 @@ export default function Dashboard() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* FedWatch Widget (New) */}
-        <div className="lg:col-span-1 rounded-lg border border-border bg-card p-0 overflow-hidden">
+        <motion.div className="lg:col-span-1 rounded-lg border border-border bg-card p-0 overflow-hidden" variants={itemVariants}>
           <FedWatch />
-        </div>
+        </motion.div>
 
         {/* AAII Sentiment Widget (New) */}
-        <div className="lg:col-span-1 rounded-lg border border-border bg-card p-0 overflow-hidden">
+        <motion.div className="lg:col-span-1 rounded-lg border border-border bg-card p-0 overflow-hidden" variants={itemVariants}>
           <AAIIWidget />
-        </div>
+        </motion.div>
 
         {/* Market Overview Widget (New - Fills Empty Slot) */}
-        <div className="lg:col-span-1 rounded-lg border border-border bg-card p-0 overflow-hidden">
+        <motion.div className="lg:col-span-1 rounded-lg border border-border bg-card p-0 overflow-hidden" variants={itemVariants}>
           <MarketOverviewWidget />
-        </div>
+        </motion.div>
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-4" variants={itemVariants}>
         <Link 
           to="/cot-reports"
           className="group p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-all"
@@ -223,7 +247,7 @@ export default function Dashboard() {
             </div>
           </div>
         </Link>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

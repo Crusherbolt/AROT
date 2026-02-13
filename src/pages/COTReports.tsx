@@ -161,6 +161,9 @@ export default function COTReports() {
 
   const trend = getTrendAnalysis();
 
+  // Cinematic mode for Crude Oil
+  const isCinematicCommodity = selectedHistory[0]?.commodity?.toUpperCase() === 'CRUDE OIL';
+
   const SortButton = ({ field, children }: { field: SortField; children: React.ReactNode }) => (
     <button 
       onClick={() => handleSort(field)}
@@ -311,15 +314,28 @@ export default function COTReports() {
 
       {/* Selected Commodity Detail View */}
       {selectedCommodity && selectedHistory.length > 0 && (
-        <div className="rounded-xl border border-border bg-card p-6 space-y-6">
+        <div className={`rounded-xl border p-6 space-y-6 animate-fade-up ${
+          isCinematicCommodity 
+            ? 'border-amber-500/30 bg-gradient-to-br from-black via-neutral-900 to-black text-white' 
+            : 'border-border bg-card'
+        }`}>
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-bold">{selectedHistory[0]?.commodity} Detailed COT Report</h2>
-              <p className="text-muted-foreground text-sm mt-1">
+              <h2 className={`text-2xl font-bold ${
+                isCinematicCommodity ? 'text-amber-500' : ''
+              }`}>{selectedHistory[0]?.commodity} Detailed COT Report</h2>
+              <p className={`text-sm mt-1 ${
+                isCinematicCommodity ? 'text-neutral-400' : 'text-muted-foreground'
+              }`}>
                 Historical positioning data • {selectedHistory.length} weeks of data
               </p>
             </div>
-            <Button variant="outline" size="sm" onClick={() => setSelectedCommodity(null)}>
+            <Button 
+              variant={isCinematicCommodity ? 'ghost' : 'outline'} 
+              size="sm" 
+              onClick={() => setSelectedCommodity(null)}
+              className={isCinematicCommodity ? 'text-amber-500 hover:text-amber-400 border-amber-500/30' : ''}
+            >
               Close Detail View
             </Button>
           </div>
@@ -505,7 +521,7 @@ export default function COTReports() {
                       {formatNumber(row.commercialShort)}
                     </TableCell>
                     <TableCell className="text-right">
-                      <ChangeCell value={row.changeLong} />
+                      <ChangeCell value={row.commChangeLong} />
                     </TableCell>
                     <TableCell className="text-right">
                       <ColoredCell value={row.commercialNet} />
@@ -519,7 +535,7 @@ export default function COTReports() {
                       {formatNumber(row.nonCommercialShort)}
                     </TableCell>
                     <TableCell className="text-right">
-                      <ChangeCell value={-row.changeShort} />
+                      <ChangeCell value={row.nonCommChangeLong} />
                     </TableCell>
                     <TableCell className="text-right">
                       <ColoredCell value={row.nonCommercialNet} />

@@ -1,21 +1,27 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/contexts/ThemeContext';
-import { Sun, Moon, BarChart3, Newspaper, Activity, LayoutDashboard } from 'lucide-react';
+import { Sun, Moon, BarChart3, Newspaper, Activity, LayoutDashboard, Droplet } from 'lucide-react';
 
 const navItems = [
   { path: '/', label: 'Dashboard', icon: LayoutDashboard },
   { path: '/cot-reports', label: 'COT Reports', icon: BarChart3 },
   { path: '/news', label: 'News Feed', icon: Newspaper },
   { path: '/gamma', label: 'Gamma/GEX', icon: Activity },
+  { path: '/crude-oil', label: 'CRUDE OIL', icon: Droplet },
 ];
 
 export function Header() {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
+  const isCinematic = ['/crude-oil', '/cru'].includes(location.pathname);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
+      isCinematic 
+        ? 'bg-black/20 border-transparent text-white backdrop-blur-sm fixed' 
+        : 'bg-background/95 border-border backdrop-blur supports-[backdrop-filter]:bg-background/60'
+    }`}>
       <div className="container flex h-14 items-center">
         <div className="flex items-center gap-2 mr-8">
         <div className="flex items-center gap-2 mr-8">
@@ -29,9 +35,9 @@ export function Header() {
             return (
               <Link key={path} to={path}>
                 <Button
-                  variant={isActive ? 'navActive' : 'nav'}
+                  variant={isActive ? 'navActive' : 'ghost'}
                   size="sm"
-                  className="gap-2"
+                  className={`gap-2 ${isCinematic && !isActive ? 'text-white/80 hover:text-white hover:bg-white/10' : ''}`}
                 >
                   <Icon className="h-4 w-4" />
                   <span className="hidden sm:inline">{label}</span>
