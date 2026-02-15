@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
+import { useSearchParams } from 'react-router-dom';
 import { 
   Search, RefreshCw, Activity, Target, 
   ArrowUp, ArrowDown, TrendingUp, AlertTriangle,
@@ -140,7 +141,9 @@ const getUpcomingExpirations = () => {
 };
 
 export default function GammaExposure() {
-  const [ticker, setTicker] = useState('SPY');
+  const [searchParams] = useSearchParams();
+  const urlTicker = searchParams.get('ticker');
+  const [ticker, setTicker] = useState(urlTicker?.toUpperCase() || 'SPY');
   const [selectedExpirations, setSelectedExpirations] = useState<string[]>([]);
   const [availableExpirations] = useState(getUpcomingExpirations);
   const [showAnnotations, setShowAnnotations] = useState(true);
@@ -155,10 +158,10 @@ export default function GammaExposure() {
   useEffect(() => {
     if (availableExpirations.length > 0 && selectedExpirations.length === 0) {
       setSelectedExpirations([availableExpirations[0]]);
-      fetchGammaData('SPY', availableExpirations[0]);
-      fetchETFFlowData('SPY');
+      fetchGammaData(ticker, availableExpirations[0]);
+      fetchETFFlowData(ticker);
     }
-  }, [availableExpirations]);
+  }, [availableExpirations, ticker]);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();

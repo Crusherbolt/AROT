@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { RefreshCw, Search, ArrowUpDown, Download, Filter, TrendingUp, Users, Info, ChevronRight, ArrowUp, ArrowDown, Calendar, Activity } from 'lucide-react';
 import { formatDistanceToNow, format } from 'date-fns';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import {
   Table,
   TableBody,
@@ -378,17 +378,23 @@ export default function COTReports() {
             </ResponsiveContainer>
           </div>
 
-          {/* Gamma Section */}
+          {/* Related ETF Gamma Section */}
           {selectedHistory[0]?.commodity && commodityETFMap[selectedHistory[0].commodity.toUpperCase()] && (
             <div className="p-4 rounded-lg border border-primary/30 bg-primary/5">
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <Activity className="h-5 w-5 text-primary" />
-                  <h3 className="font-semibold">Related ETF Gamma Exposure</h3>
-                </div>
-                <CustomBadge variant="bullish" className="font-mono">
-                  {commodityETFMap[selectedHistory[0].commodity.toUpperCase()].etf}
-                </CustomBadge>
+                <Link 
+                  to={`/gamma?ticker=${commodityETFMap[selectedHistory[0].commodity.toUpperCase()].etf}`}
+                  className="flex items-center gap-2 group hover:opacity-80 transition-opacity"
+                >
+                  <Activity className="h-5 w-5 text-primary group-hover:animate-pulse" />
+                  <h3 className="font-semibold group-hover:underline">Related ETF Gamma Exposure</h3>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+                <Link to={`/gamma?ticker=${commodityETFMap[selectedHistory[0].commodity.toUpperCase()].etf}`}>
+                  <CustomBadge variant="bullish" className="font-mono hover:bg-bullish/30 cursor-pointer">
+                    {commodityETFMap[selectedHistory[0].commodity.toUpperCase()].etf}
+                  </CustomBadge>
+                </Link>
               </div>
               
               <p className="text-sm text-muted-foreground mb-4">
