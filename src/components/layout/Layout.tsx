@@ -8,7 +8,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const location = useLocation();
-  const isCinematic = ['/crude-oil', '/cru'].includes(location.pathname);
+  const isCinematic = ['/crude-oil', '/cru', '/cot-reports'].includes(location.pathname);
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
