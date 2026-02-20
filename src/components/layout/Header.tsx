@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/contexts/ThemeContext';
-import { Sun, Moon, BarChart3, Newspaper, Activity, LayoutDashboard, Droplet } from 'lucide-react';
+import { Sun, Moon, BarChart3, Newspaper, Activity, LayoutDashboard, Droplet, Shield } from 'lucide-react';
 
 const navItems = [
   { path: '/', label: 'Dashboard', icon: LayoutDashboard },
@@ -9,6 +9,7 @@ const navItems = [
   { path: '/news', label: 'News Feed', icon: Newspaper },
   { path: '/gamma', label: 'Gamma/GEX', icon: Activity },
   { path: '/crude-oil', label: 'CRUDE OIL', icon: Droplet },
+  { path: '/vpn', label: 'VPN Service', icon: Shield },
 ];
 
 export function Header() {

@@ -17,6 +17,8 @@ import TermsOfService from "./pages/TermsOfService";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 import AAIISentiment from "./pages/AAIISentiment";
+import VPNService from "./pages/VPNService";
+
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,7 @@ const App = () => (
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="/aaii" element={<AAIISentiment />} />
+              <Route path="/vpn" element={<VPNService />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

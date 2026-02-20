@@ -27,3 +27,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# VPN Project (Private)
+Cder/
+
+# AI Tooling (never commit)
+.gemini/
+.agent/
+.cursor/
+.aider*
+.continue/
+
+# Build artifacts & binaries
+*.exe
+*.spec
+build/
+__pycache__/
+*.pyc
+public/downloads/
