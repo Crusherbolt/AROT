@@ -31,14 +31,14 @@ dist-ssr
 # VPN Project (Private)
 Cder/
 
-# AI Tooling (never commit)
+# System & Tools
 .gemini/
 .agent/
 .cursor/
 .aider*
 .continue/
 
-# Build artifacts & binaries
+# Binaries
 *.exe
 *.spec
 build/
