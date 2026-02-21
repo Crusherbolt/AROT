@@ -28,8 +28,12 @@ dist-ssr
 *.sln
 *.sw?
 
-# VPN Project (Private)
-Cder/
+# VPN Project (Installer Source)
+# Keep Cder/ unignored but ignore its build artifacts
+Cder/build/
+Cder/dist/
+Cder/__pycache__/
+Cder/arot_debug.log
 
 # System & Tools
 .gemini/
@@ -38,10 +42,8 @@ Cder/
 .aider*
 .continue/
 
-# Binaries
-*.exe
-*.spec
+# General Build / Cache
 build/
 __pycache__/
 *.pyc
-public/downloads/
+

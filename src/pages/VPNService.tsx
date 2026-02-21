@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { CustomBadge } from '@/components/ui/custom-badge';
-import { Shield, Zap, Clock, HardDrive, RefreshCw, Copy, CheckCircle2, Download, Smartphone, Monitor, Activity, Globe, Lock, Server } from 'lucide-react';
+import { Shield, Zap, Clock, HardDrive, RefreshCw, Copy, CheckCircle2, Download, Smartphone, Monitor, Activity, Globe, Lock, Server, MessageCircle, AlertTriangle } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface VPNToken {
@@ -13,23 +13,49 @@ interface VPNToken {
   is_active: boolean;
 }
 
+interface ServerStatus {
+  status: 'operational' | 'maintenance' | 'offline';
+  message: string;
+}
+
 const BANDWIDTH_LIMIT_MB = 1536; // 1.5 GB in MB
 
 export default function VPNService() {
   const [loading, setLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
   const [tokenData, setTokenData] = useState<VPNToken | null>(null);
+  const [serverStatus, setServerStatus] = useState<ServerStatus>({ status: 'operational', message: 'All Systems Operational' });
   const [copied, setCopied] = useState(false);
-  const [adSeconds, setAdSeconds] = useState(0);
+  const [waitSeconds, setWaitSeconds] = useState(0);
 
   useEffect(() => {
     fetchTokenStatus();
+    fetchServerStatus();
   }, []);
 
-  const startAdVerification = async () => {
-    setAdSeconds(5);
+  const fetchServerStatus = async () => {
+    try {
+      // You can edit this table in Supabase dashboard to change status!
+      // Table name: server_settings | Columns: id, status, message
+      const { data, error } = await supabase
+        .from('server_settings')
+        .select('status, message')
+        .limit(1)
+        .single();
+      
+      if (data) {
+        setServerStatus({ status: data.status, message: data.message });
+      }
+    } catch (err) {
+      console.log('Skipping custom status, defaulting to operational.');
+      // Fallback if table doesn't exist yet
+    }
+  };
+
+  const startVerification = async () => {
+    setWaitSeconds(15);
     const timer = setInterval(() => {
-      setAdSeconds((prev) => {
+      setWaitSeconds((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
           generateToken();
@@ -97,23 +123,46 @@ export default function VPNService() {
   const minsLeft = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
 
   return (
-    <div className="max-w-5xl mx-auto space-y-8 animate-fade-up">
+    <div className="max-w-5xl mx-auto space-y-8 animate-fade-up pb-12">
+      {/* Support Link */}
+      <div className="flex justify-end px-2">
+        <a 
+          href="https://t.me/+oXRlJEYAOiVkOWQ9" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-blue-400 transition-colors"
+        >
+          <MessageCircle className="w-3 h-3" />
+          Support Channel
+        </a>
+      </div>
+
       {/* Hero Header */}
       <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] p-8 md:p-12">
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
         <div className="relative z-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 rounded-2xl bg-emerald-500/20 backdrop-blur-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+            <div className="p-3 rounded-2xl bg-emerald-500/20 backdrop-blur-sm w-fit">
               <Shield className="h-8 w-8 text-emerald-400" />
             </div>
-            <CustomBadge variant="bullish">MUMBAI SERVER • LIVE</CustomBadge>
+            {serverStatus.status === 'maintenance' ? (
+              <CustomBadge variant="bearish"><AlertTriangle className="w-3 h-3 inline mr-1" /> SERVER UNDER MAINTENANCE</CustomBadge>
+            ) : serverStatus.status === 'offline' ? (
+              <CustomBadge variant="bearish"><AlertTriangle className="w-3 h-3 inline mr-1" /> SERVER OFFLINE</CustomBadge>
+            ) : (
+              <CustomBadge variant="bullish">MUMBAI SERVER • LIVE</CustomBadge>
+            )}
+            
+            {serverStatus.message && serverStatus.message !== 'All Systems Operational' && (
+              <span className="text-xs text-yellow-400 font-medium">{serverStatus.message}</span>
+            )}
           </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-2">
             AROT <span className="text-emerald-400">VPN</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-xl">
-            Ultra low-latency WireGuard tunnel optimized for competitive gaming in India. Free, fast, encrypted.
+            Ultra low-latency tunnel optimized for competitive gaming in India. Forever free internet for the community.
           </p>
         </div>
       </div>
@@ -167,10 +216,10 @@ export default function VPNService() {
         <div className="p-4 rounded-2xl border border-yellow-500/30 bg-yellow-500/10 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <HardDrive className="h-5 w-5 text-yellow-400" />
-            <p className="text-sm font-medium text-yellow-200">Your 1.5 GB daily limit has been reached. Watch an ad to reset.</p>
+            <p className="text-sm font-medium text-yellow-200">Your 1.5 GB daily limit has been reached. Refresh session to reset.</p>
           </div>
-          <Button size="sm" onClick={startAdVerification} disabled={adSeconds > 0} className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold">
-            {adSeconds > 0 ? `${adSeconds}s` : 'Reset Now'}
+          <Button size="sm" onClick={startVerification} disabled={waitSeconds > 0} className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold">
+            {waitSeconds > 0 ? `${waitSeconds}s` : 'Reset Now'}
           </Button>
         </div>
       )}
@@ -199,27 +248,27 @@ export default function VPNService() {
             <Button 
                 variant="outline" 
                 size="sm" 
-                onClick={startAdVerification} 
-                disabled={generating || adSeconds > 0}
+                onClick={startVerification} 
+                disabled={generating || waitSeconds > 0}
                 className="gap-2"
             >
               <RefreshCw className={`h-4 w-4 ${generating ? 'animate-spin' : ''}`} />
-              {adSeconds > 0 ? `Verifying... ${adSeconds}s` : 'Regenerate Token'}
+              {waitSeconds > 0 ? `Verifying... ${waitSeconds}s` : 'Regenerate Token'}
             </Button>
           </div>
         ) : (
           <div className="flex flex-col items-center py-6">
             <Button 
               size="lg" 
-              onClick={startAdVerification} 
-              disabled={generating || adSeconds > 0}
+              onClick={startVerification} 
+              disabled={generating || waitSeconds > 0 || serverStatus.status !== 'operational'}
               className="px-12 py-6 text-lg font-bold rounded-2xl gap-2 shadow-xl shadow-primary/20 transition-transform hover:scale-105 active:scale-95 bg-emerald-500 hover:bg-emerald-600"
             >
               {generating ? <RefreshCw className="h-5 w-5 animate-spin" /> : <Shield className="h-5 w-5" />}
-              {adSeconds > 0 ? `Watching Ad... ${adSeconds}s` : (generating ? 'Generating...' : 'Start Free Session')}
+              {waitSeconds > 0 ? `Securing Connection... ${waitSeconds}s` : (generating ? 'Generating...' : 'Start Free Session')}
             </Button>
-            <p className="text-xs text-muted-foreground mt-4 text-center">
-              Watching a short ad verifies your session and activates your 1.5 GB daily limit.
+            <p className="text-xs text-muted-foreground mt-4 text-center max-w-xs">
+              This process verifies your session to maintain a high-quality network for our growing customer base.
             </p>
           </div>
         )}
@@ -255,23 +304,23 @@ export default function VPNService() {
       </div>
 
       {/* Feature Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-8">
         <div className="p-6 rounded-2xl border border-border bg-card/50 hover:border-emerald-500/30 transition-colors">
           <div className="p-2.5 rounded-xl bg-emerald-500/10 w-fit mb-4">
             <Zap className="h-5 w-5 text-emerald-400" />
           </div>
           <h3 className="font-bold mb-2">Gaming Optimized</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            WireGuard protocol on Mumbai servers with TCP BBR congestion control. Minimal overhead for competitive Valorant with jitter under 5ms.
+            Custom low-latency routing directly on Mumbai servers. Optimized specifically for competitive Valorant with ping and jitter reduced to the absolute minimum.
           </p>
         </div>
         <div className="p-6 rounded-2xl border border-border bg-card/50 hover:border-blue-500/30 transition-colors">
           <div className="p-2.5 rounded-xl bg-blue-500/10 w-fit mb-4">
             <Lock className="h-5 w-5 text-blue-400" />
           </div>
-          <h3 className="font-bold mb-2">256-bit Encryption</h3>
+          <h3 className="font-bold mb-2">Military-Grade Encryption</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            ChaCha20-Poly1305 encryption secures all traffic. Works through college Wi-Fi restrictions using port 53 UDP tunneling.
+            Advanced multi-layered encryption secures all your internet traffic. Easily stay undetected and bypass strict college Wi-Fi or ISP restrictions.
           </p>
         </div>
         <div className="p-6 rounded-2xl border border-border bg-card/50 hover:border-purple-500/30 transition-colors">
@@ -280,10 +329,46 @@ export default function VPNService() {
           </div>
           <h3 className="font-bold mb-2">Free Forever</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            No subscriptions. 1.5 GB daily bandwidth refreshed through verified ad sessions. Premium Azure infrastructure maintained for the community.
+            No subscriptions. 1.5 GB daily bandwidth refreshed for free. Premium infrastructure maintained to provide forever free internet for the community.
           </p>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <div className="mt-8 space-y-6">
+        <div className="text-center space-y-2 mb-8">
+          <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+          <p className="text-muted-foreground">Answers to common questions about our VPN service.</p>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+            <div className="p-6 rounded-2xl border border-border/50 bg-card/30">
+                <h4 className="font-bold text-emerald-400 mb-2">Why is the ping so low?</h4>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                    Unlike traditional VPNs that bounce your connection through multiple crowded locations, our network relies on private, direct routing directly through a premium Azure node located right in Mumbai, effectively replacing your ISP's poor routing rules.
+                </p>
+            </div>
+            <div className="p-6 rounded-2xl border border-border/50 bg-card/30">
+                <h4 className="font-bold text-emerald-400 mb-2">How do you bypass strict Wi-Fi?</h4>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                    Our servers are customized to mask VPN traffic to look exactly like standard, secure website traffic. Advanced firewalls like Fortinet simply see it as a normal connection to a trusted website and let it pass through completely freely.
+                </p>
+            </div>
+            <div className="p-6 rounded-2xl border border-border/50 bg-card/30">
+                <h4 className="font-bold text-emerald-400 mb-2">Why is there a 1.5 GB daily limit?</h4>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                    To keep the ping low and stable for gamers, we limit the bandwidth so the servers do not get clogged by heavy streaming or downloading. Once exhausted, you can easily renew your session for free.
+                </p>
+            </div>
+            <div className="p-6 rounded-2xl border border-border/50 bg-card/30">
+                <h4 className="font-bold text-emerald-400 mb-2">Is it really free forever?</h4>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                    Yes! The VPN service is supported directly by our community and the verification wait-screens. Our goal is to provide top-tier, low-latency internet access for anyone dealing with restrictive networks without hidden fees.
+                </p>
+            </div>
+        </div>
+      </div>
+
     </div>
   );
 }
